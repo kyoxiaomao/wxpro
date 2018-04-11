@@ -1,0 +1,8 @@
+<!--pages/txtedit.wxml-->
+<text style='font-size:14px;'>编辑内容:</text>
+<view class="box"  >
+  <form bindsubmit="bindFormSubmit">
+    <textarea class="section" placeholder="填写文字不超过300个" name="textarea"  />
+    <button form-type="submit"> 提交 </button>
+  </form>
+</view>

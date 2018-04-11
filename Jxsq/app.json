@@ -1,0 +1,19 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/sousuo/sousuo",
+    "pages/city/city",
+    "pages/sales/sales",
+          "pages/txtedit/txtedit"
+ 
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "橙色少儿艺术培训中心",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": "false"
+  }
+}

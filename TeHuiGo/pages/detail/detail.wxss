@@ -1,0 +1,114 @@
+/**index.wxss**/
+.swiper {
+
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.djyh-con-txt-dp-tb{
+     width: 12px;
+  height: 12px;
+
+}
+.con-title{
+    margin-top: 3px;
+    font-size: 14px;
+}
+.con-price{
+  width: 85%;
+  margin-top: 3px;
+    padding: 5px 10px 5px 10px;
+    background-image: url("https://www.citytk.com/djyhphp/pricebg.jpg") ;
+}
+.con-price-01{
+   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+   align-items: baseline;
+}
+.con-price-02{
+    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+   align-items: baseline;
+}
+.lqsm{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  margin-top: 3px;
+  color: #bf0000;
+  font-weight: bold;
+  font-size: 16px;
+}
+.lqsm-kl{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  padding: 10px 0px 10px 0px;
+  border: #bf0000 dashed  1px;
+}
+.lqsm-kl text{
+   width: 80%;
+}
+.con-price-txt-01{
+   font-weight: bold;
+   font-size: 14px;
+}
+.con-price-txt-02{
+ font-size: 20px;
+   font-weight: bold;
+     color: #bf0000;
+}
+.con-price-txt-021{
+ font-size: 18px;
+   font-weight: bold;
+     color: #bf0000;
+}
+.con-price-txt-03{
+   font-size: 14px;
+   color: #666;
+   margin-left: 10px;
+}
+.con-price-txt-031{
+   font-size: 16px;
+   color:#f99033;
+   margin-left: 10px;
+}
+.con-price-txt-032{
+   font-size: 16px;
+   color: #666;
+ 
+}
+.an-bt{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  margin-top: 10px;
+}
+.an-bt01{
+  width: 70px;
+  height: 35px;
+}
+.an-bt02{
+  width: 70px;
+  height: 35px;
+  margin-left: 20px;
+}
+.sm-txt{
+    width: 90%;
+  display: flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+
+}

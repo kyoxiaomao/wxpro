@@ -1,0 +1,126 @@
+/* pages/qingdan/qingdan.wxss */
+/**导航菜单**/
+.qd-con{
+  width: 100%;
+   display:flex;
+   flex-direction:column;
+   justify-content: center;
+     align-items: center;
+}
+.qd-con-date{
+  
+    font-size: 14px;
+    border-bottom: 1px dashed #000;
+    text-align:center;
+    padding: 5px 0 5px 0;
+}
+.dh{
+position: fixed; 
+  z-index: 999;
+  width: 100%;
+   display: flex;
+   flex-direction: row;
+ justify-content:space-around;
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+  background-color: #fff;
+  height: 30px;
+}
+.dh-txt01-true{
+    font-size: 14px;
+    color:#f99033;
+    font-weight: bold;
+    text-shadow:1px 1px 3px #fdc77e;
+}
+
+.dh-txt01-false{
+    font-size: 14px;
+    color: #999;
+}
+  /**dujia**/
+.djyh-content{
+    margin-top: 5px;
+   display: flex;
+  flex-direction: row;
+ justify-content: flex-start;
+   border: 1px solid #eee;
+  
+
+}
+ 
+.djyh-con-txt{
+   display: flex;
+  flex-direction: column;
+ justify-content: flex-start;
+ margin-left: 6px;
+ width: 100%;
+}
+
+.djyh-con-txt-dp-tb{
+  width: 12px;
+  height: 12px;
+  margin-bottom: 3px;
+ 
+}
+.djyh-con-txt-dp-bt{
+  font-size: 12px;
+    margin-bottom: -2px;
+}
+ 
+.djyh-con-txt-cp-bt{
+   font-size: 14px;
+}
+.djyh-con-txt-cp-quan{
+  display: flex;
+  flex-direction: row;
+ justify-content: flex-start;
+ align-items: flex-end;
+}
+.djyh-con-txt-cp-quan-01{
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+}
+.djyh-con-txt-cp-quan-02{
+  font-size: 16px;
+  font-weight: bold;
+   color: #bf0000;
+  
+}
+.djyh-con-txt-cp-quan-020{
+  font-size: 14px;
+   color: #bf0000;
+  
+}
+.djyh-con-txt-cp-quan-03{
+  font-size: 14px;
+    color: #f99033;
+   
+}
+.djyh-con-txt-cp-quan-04{
+  font-size: 12px;
+  margin-left: 2px;
+}
+.djyh-con-txt-cp-quan-05{
+  font-size: 12px;
+  margin-left: 1px;
+}
+.djyh-con-txt-cp-btbox{
+  display: flex;
+  flex-direction: row;
+ justify-content:flex-start;
+ align-items: flex-end;
+ margin-top: 10px;
+
+}
+  .jiezhishijian{
+     color: #666;
+ }
+  .djyh-con-txt-cp-tbbox{
+     margin-left: 2px;
+     display: flex;
+  flex-direction: row;
+ justify-content:flex-end;
+ }
+
+ /**dujia**/

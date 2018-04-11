@@ -1,0 +1,311 @@
+/**index.wxss**/
+.lmimgcss{
+  width: 50px;
+  height: 50px;
+}
+.container{
+  padding-top:0px;
+}
+.swiper {
+
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.ggtj{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+  margin-top: 5px;
+ 
+}
+.ggtj-txt1{
+  font-size: 16px;
+  color:  #bf0000;
+   font-weight: bold;
+     padding-left: 40rpx;
+}
+ 
+.ggt-imgbox{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+ 
+}
+.ggt-img1{
+   display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+ 
+}
+ 
+.ggt-title{
+   display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+.ggt-title-01{
+  font-size: 12px;
+  color: #666;
+}
+.ggt-image-02{
+   width:14px;
+  height: 14px;
+}
+.ggt-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+.ggt-con-01{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin-left: 5px;
+   
+}
+.ggt-con-01-txt-01{
+ color: #000;
+ font-size: 14px;
+ 
+}
+.ggt-con-01-txt-02{
+ color: #bf0000;
+ font-size: 14px;
+ font-weight:bold;
+}
+
+.ggt-fenge{
+   display: flex;
+  flex-direction: column;
+ justify-content:center;
+ margin-left: 2px;
+}
+.ggt-fenge-img{
+  width: 2px;
+  height: 25px;
+  margin-left: 2px;
+}
+.ggt-con-02{
+  display: flex;
+  flex-direction: column;
+ justify-content:center;
+ margin-left: 5px;
+}
+.ggt-con-01-txt-box{
+    display: flex;
+  flex-direction: row;
+ justify-content: flex-start;
+ align-items: flex-end;
+}
+.ggt-con-01-txt-box-01{
+  font-size: 12px;
+   color: #666;
+}
+.ggt-con-01-txt-box-02{
+  font-size: 12px;
+   color: #f99033;
+   margin-left: 3px;
+}
+.ggt-con-01-txt-box-03{
+ color: #bf0000;
+ font-size: 14px;
+   margin-left: 3px;
+}
+.ggt-con-01-txt-box-04{
+  font-size: 12px;
+   color: #666;
+}
+
+/*独家优惠*/
+.djyh{
+ width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+
+  color: #666;
+   
+}
+.djyh-content{
+    margin-top: 5px;
+   display: flex;
+  flex-direction: row;
+ justify-content: flex-start;
+   border: 1px solid #eee;
+  margin-left: 2px;
+
+}
+ 
+.djyh-con-txt{
+   display: flex;
+  flex-direction: column;
+ justify-content: flex-start;
+ margin-left: 5px;
+
+}
+ .djyh-con-txt-cp-tbbox{
+   width: 100%;
+    display: flex;
+  flex-direction: row;
+ justify-content:center;
+  
+
+ }
+.djyh-con-txt-dp-tb{
+  width: 12px;
+  height: 12px;
+  margin-bottom: 3px;
+ 
+}
+.djyh-con-txt-dp-bt{
+  font-size: 12px;
+    margin-bottom: -2px;
+}
+ 
+.djyh-con-txt-cp-bt{
+   
+}
+.djyh-con-txt-cp-quan{
+
+  display: flex;
+  flex-direction: row;
+ justify-content: flex-start;
+ align-items: flex-end;
+
+}
+.djyh-con-txt-cp-quan-01{
+  
+  color: #000000;
+  font-weight: bold;
+}
+.djyh-con-txt-cp-quan-02{
+ 
+  font-weight: bold;
+   color: #bf0000;
+  
+}
+.djyh-con-txt-cp-quan-020{
+  font-size: 14px;
+   color: #bf0000;
+  
+}
+.djyh-con-txt-cp-quan-03{
+   
+    color: #f99033;
+    margin-left: 5px;
+}
+.djyh-con-txt-cp-quan-04{
+   
+  margin-left: 1px;
+}
+.djyh-con-txt-cp-quan-041{
+  
+  margin-left: 5px;
+}
+.djyh-con-txt-cp-quan-05{
+  
+  margin-left: 1px;
+}
+.djyh-con-txt-cp-btbox{
+ 
+  display: flex;
+  flex-direction: row;
+ justify-content:center;
+ align-items: flex-end;
+ margin-top: 1px;
+
+}
+.djyh-con-txt-cp-bt1{
+ 
+  margin-top: 2px;
+  opacity: 0.65;
+  
+   
+}
+.djyh-con-txt-cp-bt2{
+   opacity: 0.65;
+  margin-top: 2px;
+  margin-left: 5px;
+
+}
+
+/**导航菜单**/
+.dh{
+position: fixed; 
+
+  z-index: 998;
+  width: 100%;
+   display: flex;
+   flex-direction: row;
+ justify-content:space-around;
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+  background-color: #fff;
+  height: 30px;
+}
+.dh-txt01-true{
+    font-size: 14px;
+    color:#f99033;
+    font-weight: bold;
+    text-shadow:1px 1px 3px #fdc77e;
+}
+
+.dh-txt01-false{
+    font-size: 14px;
+    color: #999;
+}
+/**搜索栏**/
+.topss{
+position: fixed; 
+  z-index: 999;
+  width: 100%;
+   display: flex;
+   flex-direction: row;
+ justify-content:center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #fff;
+   opacity: 0.75;
+}
+.kuang{
+  width: 60%;
+   border: 1px solid #eee;
+   border-radius: 15px;
+   background-color: #eee;
+   color: #bbb;
+   font-size: 14px;
+   
+}
+/********************类目导航css***********************/
+.lmbox{
+  display: flex;
+  flex-direction:column;
+ justify-content:center;
+}
+.lmtxt{
+  font-size: 12px;
+  color: #bbb;
+  text-align: center;
+}
+.lmh{
+  width: 100%;
+   display: flex;
+  flex-direction:row;
+ justify-content:space-around;
+  margin-top: 5px;
+
+}
+.lmfq{
+    width: 100%;
+   
+}

@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="qd">
+    <view class="qd-con">
+      <block wx:for="{{qdData}}" wx:key="*this">
+        <text class="qd-con-date" style="width:{{titleW}}px;">2017年3月19日</text>
+        <view id="{{item.viewId}}" class="djyh-content" style="width:{{qdBoxW}}px;">
+          <view style="width:{{djyhImgW}}px;height:{{djyhImgH}}px;">
+            <image src="{{item.imgutl01}}" style="width:{{djyhImgW}}px;height:{{djyhImgH}}px;">
+            </image>
+          </view>
+          <view class="djyh-con-txt">
+            <view class="djyh-con-txt-cp-btbox">
+              <image class="djyh-con-txt-dp-tb" src="{{item.logoimgutl01}}"></image>
+              <text class="djyh-con-txt-cp-bt">{{item.djyhTitle}}...</text>
+            </view>
+            <view class="djyh-con-txt-cp-quan">
+              <text class="djyh-con-txt-cp-quan-01">优惠券</text>
+              <text class="djyh-con-txt-cp-quan-02">￥{{item.quanPrice}}</text>
+            </view>
+            <view class="djyh-con-txt-cp-quan">
+              <text class="djyh-con-txt-cp-quan-01">券后价</text>
+              <text class="djyh-con-txt-cp-quan-02">￥{{item.price}}</text>
+            </view>
+            <view class="jiezhishijian">
+              <text class="djyh-con-txt-cp-quan-04">到期时间：</text>
+              <text class="djyh-con-txt-cp-quan-05">{{item.day}}</text>
+            </view>
+          </view>
+          <view class="djyh-con-txt-cp-tbbox">
+            <image src="../images/lqgm-bt03.png" style="width:{{lqImgW}}px;height:{{lqImgH}}px;" bindtap="lqClick"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="dh" style="bottom:0px;" hidden="{{dhbottom}}">
+    <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">首页</text>
+    <text class="{{dhtxtClass02}}" hidden="true" bindtap="dhtxt02Cllick">招聘群管</text>
+    <text class="{{dhtxtClass03}}" bindtap="dhtxt03Cllick">我的清单</text>
+    <text class="{{dhtxtClass04}}" bindtap="dhtxt04Cllick">个人中心</text>
+  </view>
+</view>

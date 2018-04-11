@@ -1,0 +1,44 @@
+<view class="container">
+  <swiper class="swiper" style="height:{{whSwiper}}px;"  indicator-dots="true">
+    <block wx:for="{{imgarr}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+<view class="con-title">
+<image class="djyh-con-txt-dp-tb" hidden="true" src="../images/biao.png"></image>
+<text>{{prosp.sptitle}}</text>
+</view>
+<view class="con-price">
+<view class="con-price-01">
+<text class="con-price-txt-01">券后价</text>
+<text class="con-price-txt-02">￥{{prosp.price}}包邮</text>
+<text class="con-price-txt-031">{{prosp.purchase}}</text>
+<text class="con-price-txt-032">人已付款</text>
+<text class="con-price-txt-03" hidden="true">现价:{{prosp.xianprice}}元</text>
+</view>
+<view class="con-price-02">
+<text class="con-price-txt-01">优惠券</text>
+<text class="con-price-txt-021">¥{{prosp.quanprice}}</text>
+<text class="con-price-txt-03">截止时间:{{prosp.outtime}}</text>
+ 
+</view>
+</view>
+<view class="lqsm">
+<text class="lqsm-txt">导购说明</text>
+</view>
+<view class="lqsm-kl">
+<text hidden="true"> 请点击下面联系客服按钮，我们会有专业的客服来为您服务！</text>
+<text  >【长按复制】这条信息，打开淘宝客户端{{prosp.kouling}}，即可领取独家购物优惠券！</text>
+</view>
+<view class="an-bt">
+<button open-type="contact" hidden="true"  type="default-light" size="mini" > 联系客服</button>
+<image class="an-bt01" src="http://www.citytk.com/tehuigo/fz-bt1.png"    data-kouling="{{prosp.kouling}}" bindtap="fzclick"></image>
+<image class="an-bt02" src="http://www.citytk.com/tehuigo/fx-bt1.png"   data-kouling="{{prosp.viewId}}" open-type="share" bindtap="fxclick"></image>
+</view>
+<view class="sm-txt" >
+<text >①使用本小程序购物后还有机会获得“购物积分”，可通过积分来免费兑换您所需要的商品！</text>
+<text  >②您的积分可到个人中心->积分，查询您的购物积分！</text>
+</view>
+</view>

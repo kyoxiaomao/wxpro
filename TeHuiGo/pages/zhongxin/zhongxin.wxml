@@ -1,0 +1,40 @@
+<view class="container"  >
+<view class="top"> 
+<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+ <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class="top-title" style="width:{{topW}}px;">
+<text class="dj">等级：</text>
+<text>VIP1</text>
+<text class="jf">积分：</text>
+<text>5685</text>
+<text class="jf01">冻结：565</text>
+ 
+</view>
+<view class="gerenzhongxin">
+<view class="mfdh">
+<image class="lb-img" src="../images/ddcx.png"></image>
+<text>招募代理</text>
+</view>
+<view class="mfdh">
+<image class="lb-img" src="../images/mfdh.png"></image>
+<text>积分兑换</text>
+</view>
+<view class="mfdh">
+<image class="lb-img" src="../images/jyfk.png"></image>
+<text>建议反馈</text>
+</view>
+</view>
+
+</view>
+   
+
+
+
+  <view class="dh" style="bottom:0px;" hidden="{{dhbottom}}" >
+    <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">首页</text>
+    <text class="{{dhtxtClass02}}"  hidden="true" bindtap="dhtxt02Cllick">招聘群管</text>
+    <text class="{{dhtxtClass03}}" bindtap="dhtxt03Cllick">我的清单</text>
+    <text class="{{dhtxtClass04}}" bindtap="dhtxt04Cllick">个人中心</text>
+  </view>
+  
+  </view>

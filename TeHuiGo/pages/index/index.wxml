@@ -1,0 +1,149 @@
+
+<!--index.wxml-->
+<view class="container"  >
+     <swiper class="swiper"  style="height:{{whSwiper}}px;"  indicator-dots="true">
+    <block wx:for="{{imgarr}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item}}"    mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper> 
+  <view class='lmfq' data-txt='类目分区'>
+  <view class='lmh'>
+  <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/99.png" class='lmimgcss' />
+  <text class='lmtxt' style='font-size:10px;'>9.9包邮</text>
+  </view>
+   <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/nvzhuang.png" class='lmimgcss'  />
+  <text class='lmtxt'>女装</text>
+  </view>
+   <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/muying.png"class='lmimgcss'  />
+  <text class='lmtxt'>母婴</text>
+  </view>
+   <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/meizhuang.png"class='lmimgcss'  />
+  <text class='lmtxt'>美妆</text>
+  </view>
+   <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/xiebao.png"class='lmimgcss'  />
+  <text class='lmtxt'>鞋包</text>
+  </view>
+  </view>
+  <view class='lmh'>
+  <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/meishi.png"class='lmimgcss'  />
+  <text class='lmtxt'>美食</text>
+  </view>
+   <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/jiadian.png"class='lmimgcss'  />
+  <text class='lmtxt'>家电</text>
+  </view>
+   <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/jiaju.png"class='lmimgcss'  />
+  <text class='lmtxt'>家居</text>
+  </view>
+   <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/jiafang.png"class='lmimgcss'  />
+  <text class='lmtxt'>家纺</text>
+  </view>
+   <view class="lmbox">
+  <image src="https://www.citytk.com/tehuigo/lmlogo/nanzhuang.png"class='lmimgcss'  />
+  <text class='lmtxt'>男装</text>
+  </view>
+  </view>
+  </view>
+  <view class="ggtj" hidden="true"  >
+    <text class="ggtj-txt1" >【今日必抢】</text>
+  </view>
+  <view class="ggt-imgbox" hidden="true" >
+<block wx:for="{{ggtjData}}" wx:key="viewId"  >
+    <!--imgbox开1始-->
+    <view id="{{item.viewId}}" class="ggt-img1"  >
+      <image style="width:{{gftjImgW}}px;height:{{gftjImgH}}px;" src="{{item.imgUrl01}}"></image>
+      <view class="ggt-title">
+        <text class="ggt-title-01" >{{item.ggtjTitle}}</text>
+        <image class="ggt-image-02" src="{{item.logoimgUrl01}}"></image>
+          <image class="ggt-image-02" src="{{item.logoimgUrl02}}"></image>
+            <image class="ggt-image-02" src="{{item.logoimgUrl03}}"></image>
+      </view>
+      <view class="ggt-content">
+        <view class="ggt-con-01">
+          <text class="ggt-con-01-txt-01">券后价</text>
+          <text class="ggt-con-01-txt-02">¥{{item.price}}</text>
+        </view>
+        <view class="ggt-fenge">
+          <image class="ggt-fenge-img" src="../images/fenge.jpg"></image>
+        </view>
+        <view class="ggt-con-02">
+          <view class="ggt-con-01-txt-box">
+            <text class="ggt-con-01-txt-box-04">券</text>
+            <text class="ggt-con-01-txt-box-03">{{item.quanPrice}}</text>
+          </view>
+          <view class="ggt-con-01-txt-box">
+            <text class="ggt-con-01-txt-box-02">{{item.purchase}}</text>
+            <text class="ggt-con-01-txt-box-01">人已买</text>
+          </view>
+        </view>
+      </view>
+    </view>
+ </block>
+     
+  </view>
+
+  <!--独家优惠开始-->
+  <view class="ggtj">
+    <text class="ggtj-txt1">【独家优惠】</text>
+  </view>
+  
+    <!--独家优惠LIST开始-->
+ 
+  <view class="djyh">
+     <block wx:for="{{djyhData}}" wx:key="viewId">
+    <view  id="{{item.viewId}}"  class="djyh-content" style="width:{{djyhBoxW}}px;" >
+      <image  src="{{item.imgutl01}}" style="width:{{djyhImgW}}px;height:{{djyhImgH}}px;"></image>
+      <view class="djyh-con-txt" >
+         
+        <view class="djyh-con-txt-cp-btbox"  >
+          <text class="djyh-con-txt-cp-bt" style="width:{{djyhtitleWW}}px;font-size:{{djyhtitleSE01}}px;" >{{item.djyhtitle}}...</text>
+          <image class="djyh-con-txt-dp-tb" hidden="true" src="{{item.logoimgutl01}}"></image>
+        </view>
+        <view class="djyh-con-txt-cp-quan"  >
+          <text class="djyh-con-txt-cp-quan-01" style="font-size:{{djyhtitleSE01}}px;" >券后价</text>
+          <text class="djyh-con-txt-cp-quan-02" style="font-size:{{djyhtitleSE00}}px;">￥{{item.price}}</text>
+          <text class="djyh-con-txt-cp-quan-03" style="font-size:{{djyhtitleSE02}}px;">{{item.purchase}}</text>
+          <text class="djyh-con-txt-cp-quan-04" style="font-size:{{djyhtitleSE02}}px;">人已买</text>
+        </view>
+        <view class="djyh-con-txt-cp-quan"   >
+          <text class="djyh-con-txt-cp-quan-01" style="font-size:{{djyhtitleSE01}}px;">优惠券</text>
+          <text class="djyh-con-txt-cp-quan-020" style="font-size:{{djyhtitleSE01}}px;">￥{{item.quanPrice}}</text>
+          <text class="djyh-con-txt-cp-quan-041" style="font-size:{{djyhtitleSE02}}px;">截止</text>
+          <text class="djyh-con-txt-cp-quan-05" style="font-size:{{djyhtitleSE02}}px;">{{item.day}}</text>
+       
+        </view>
+        <view class="djyh-con-txt-cp-tbbox"   >
+          <image style="width:{{djyhImgbtW}}px;height:{{djyhImgbtH}}px;" src="http://www.citytk.com/tehuigo/bt-test.png" class="djyh-con-txt-cp-bt1" data-spid="{{item.viewId}}" bindtap="lqClick" ></image>
+         <image style="width:{{djyhImgbtW}}px;height:{{djyhImgbtH}}px;"  src="http://www.citytk.com/tehuigo/jrqd-bt1.png"  class="djyh-con-txt-cp-bt2" data-spid="{{item.viewId}}" bindtap="lqClick" ></image>
+        </view>
+      </view>
+    </view>
+    </block>
+  </view>
+ <!--查询功能-->
+  <view class="topss" style="top:0px;">
+  <view class="kuang" bindtap='ssClick'>
+  <image style="width:16px;height:16px;margin-left:5px;margin-right:5px;opacity:0.5;"  src="../images/ddcx.png" />输入查询关键词</view>
+  <image style="width:22px;height:22px;margin-left:5px;margin-right:5px;opacity:0.5;"  src="../images/kefu.png" />
+    <text style="color:#999;">客服</text>
+  </view> 
+  
+  
+  <view class="dh" style="bottom:0px;" hidden="{{dhbottom}}" >
+    <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">首页</text>
+    <text class="{{dhtxtClass02}}"  hidden="true" bindtap="dhtxt02Cllick">招聘群管</text>
+    <text class="{{dhtxtClass03}}" bindtap="dhtxt03Cllick">我的清单</text>
+    <text class="{{dhtxtClass04}}" bindtap="dhtxt04Cllick">个人中心</text>
+  </view>
+  
+</view>

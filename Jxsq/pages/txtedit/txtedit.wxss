@@ -1,0 +1,11 @@
+/* pages/txtedit.wxss */
+.box{
+  width: 100%;
+ 
+ 
+}
+.section{
+  width:  100%;
+ 
+  border:   1px #ddd solid; 
+}

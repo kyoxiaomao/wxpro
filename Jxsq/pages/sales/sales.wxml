@@ -1,0 +1,4 @@
+<!--pages/sales/sales.wxml-->
+<view class="container"  >
+<view><image src='../images/hdimg01.jpg'></image></view>
+</view>
