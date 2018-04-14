@@ -1,4 +1,5 @@
 <!--pages/sales/sales.wxml-->
-<view class="container"  >
-<view><image src='../images/hdimg01.jpg'></image></view>
-</view>
+
+
+<web-view src="https://www.citytk.com/webhtml/tk.html"></web-view>
+

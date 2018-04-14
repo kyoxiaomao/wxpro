@@ -42,9 +42,9 @@
  <!--商家活动-->
  <view class='sjhd-box'  >
  <view class='sjhd-title'><text class='sjhd-title-txt'>商家活动</text></view>
- <view class='sjhd-img' >
- <image class='sjhd-images'  src="https://www.citytk.com/citytk/zjjxhy000001/zs2.jpg" style="height:{{hdImgHH}}px;margin-top:10px;" />
- <view class='sjhd-time'>【活动】橙色艺术亲子体验日开始啦！ 2017/11/25 </view>
+ <view class='sjhd-img' bindtap='sjonClick' >
+ <image class='sjhd-images'  src="https://www.citytk.com/webhtml/z1.jpg" style="height:{{hdImgHH}}px;margin-top:10px;" />
+ <view class='sjhd-time'>【活动】一布一生手工秀包招募！ 2017/11/25 </view>
  </view>
 
   <view class='sjhd-img' >

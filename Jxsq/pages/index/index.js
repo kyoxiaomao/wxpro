@@ -52,6 +52,12 @@ Page({
       phoneNumber: '18157308858' //仅为示例，并非真实的电话号码
     })
   },
+  sjonClick:function(){
+    wx.navigateTo({
+      url: '../sales/sales'
+    })
+  }
+  ,
  endtap:function(e){
  
     var that = this
