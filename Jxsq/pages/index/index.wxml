@@ -67,7 +67,7 @@
     <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">商家首页</text>
     <text class="{{dhtxtClass02}}"  hidden="true" bindtap="dhtxt02Cllick">互动社区</text>
     <text class="{{dhtxtClass03}}" bindtap="dhtxt03Cllick">全城活动</text>
-    <text class="{{dhtxtClass04}}" bindtap="dhtxt04Cllick">全城商品</text>
+    <text class="{{dhtxtClass04}}" bindtap="dhtxt04Cllick">个人中心</text>
   </view>
   
 </view>
