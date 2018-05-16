@@ -1,0 +1,30 @@
+<!--pages/sousuo/sousuo.wxml-->
+<view class='bigbox'>
+
+ <view class="input" >
+    <input focus="{{focus}}" class="input-text" maxlength="20" placeholder-style="color:#ddd;" placeholder="请输入..." />
+    <view class='input-bt'>搜索</view>
+  </view>
+  <view class='sslishi'>
+  <view class='sslishi01'>历时搜索</view>
+  <view class='sslishibox'>    
+  <view class='sslishi-con'>秋冬女装</view>
+    <view class='sslishi-con'>连衣裙</view>
+     <view class='sslishi-con'>毛衣</view>
+    <view class='sslishi-con'>春秋衬衣</view>
+    <view class='sslishi-con'>A版毛呢大衣</view>
+    <view class='sslishi-con'>春秋衬衣</view>
+    </view>
+
+  </view>
+     <view class='sslishi'>
+  <view class='sslishi01'>热门搜索</view>
+  <view class='sslishibox'>    
+    <view class='sslishi-con'>春秋衬衣</view>
+    <view class='sslishi-con'>A版毛呢大衣</view>
+    <view class='sslishi-con'>春秋衬衣</view>
+    </view>
+
+  </view>
+
+  </view>

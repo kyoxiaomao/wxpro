@@ -1,0 +1,9 @@
+/* pages/sales/sales.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #ddd;  
+}  
+.container{
+  padding-top:0px;
+}

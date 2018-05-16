@@ -1,0 +1,271 @@
+/**index.wxss**/
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #ddd;  
+}  
+.lmimgcss{
+  width: 50px;
+  height: 50px;
+}
+.container{
+  padding-top:0px;
+}
+.swiper {
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+/**商家信息**/
+.sjxx-box{
+  width: 100%;
+   display:flex;
+   flex-direction: column;
+
+     background-color: #fff;
+     margin-top: 5px;
+}
+.sjxx-box-title{
+  font-size: 24px;
+  margin-left: 10px;
+  text-shadow: 1px 1px #444;
+  padding: 0px;
+}
+.sjxx-box-industry{
+   font-size: 20px;
+  margin-left: 10px;
+  color: #aaa;
+}
+.sjxx-box-address{
+   font-size: 16px;
+  margin-left: 10px;
+   color: #222;
+    display:flex;
+   flex-direction:row;
+   justify-content:flex-start;
+   align-items:baseline;
+}
+.sjxx-box-business{
+   font-size: 16px;
+  margin-left: 10px;
+   color: #222;
+    display:flex;
+   flex-direction:row;
+   align-items:baseline;
+    
+}
+.sjxx-box-telephone{
+   font-size: 16px;
+  margin-left: 10px;
+   color: #0000ee;
+    display:flex;
+   flex-direction:row;
+   align-items:baseline;
+   text-decoration: underline;
+ 
+}
+.sjxx-box-telephone2{
+   font-size: 16px;
+  margin-left: 10px;
+   color: #222;
+    display:flex;
+   flex-direction:row;
+   align-items:baseline;
+}
+/**广告区域**/
+.gg-box{
+  width: 100%;
+   display:flex;
+   flex-direction: flex;
+     background-color: #fff;
+    height: 160px;
+     margin-top: 5px;
+     padding-top:5px;
+     padding-bottom: 5px;
+}
+.gg01{
+  width: 195px;
+  height: 160px;
+    background-color: #00ff00;
+}
+.gg02{
+ width: 180px;
+  height: 160px;
+      display:flex;
+   flex-direction: column;
+}
+.gg02-01{
+   width: 180px;
+  height: 80px;
+    background-color: #00fff0;
+}
+.gg02-02{
+   width: 180px;
+  height: 80px;
+   
+      background-color: #f0ff00;
+}
+ 
+/**商家活动**/
+.sjhd-box{
+  width: 100%;
+   display:flex;
+   flex-direction: column;
+     background-color: #fff;
+     margin-top: 5px;
+}
+.sjhd-title{
+   width: 100%;
+   display:flex;
+   flex-direction:row;
+   justify-content: flex-start;
+   align-items:baseline;
+ 
+  
+   border-bottom: 1px #ddd solid; 
+}
+.sjhd-title-txt{
+    font-size: 16px;
+padding: 5px 5px 5px 5px;
+   color: #777;
+   font-weight: bold;
+}
+.sjhd-title-txt01{
+   font-size: 16px;
+padding: 5px 5px 5px 5px;
+   color: #00fff0;
+   font-weight: bold;
+}
+.sjhd-img{
+    width: 100%;
+   display:flex;
+   flex-direction: column;
+   padding-bottom: 5px;
+    border-bottom: 1px #eee solid; 
+}
+.sjhd-time{
+  font-size: 14px;
+   color: #999;
+}
+.sjhd-images{
+  width: 100%;
+}
+.sjhd-txt{
+  font-size: 14px;
+   color: #444;
+   padding: 10px 10px 10px 10px;
+   text-indent: 2em;
+}
+/**浮标**/
+.fb{
+position: fixed; 
+  z-index: 998;
+  width: 100%;
+   display: flex;
+   flex-direction: row;
+ justify-content:flex-end;
+
+}
+.fb-biao{
+    display: flex;
+   flex-direction:column;
+}
+.fb-biao-img1{
+   background-image: url("http://www.citytk.com/citytk/images/dh01.png")  ;
+  background-size: 50px 50px;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+ opacity: 0.8;
+ margin-right: 2px;
+}
+.fb-biao-img2{
+   background-image: url("http://www.citytk.com/citytk/images/wx01.png")  ;
+   background-position: 50% 50%;
+  background-size: 48px 48px;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+ opacity: 0.8;
+ margin-right: 2px;
+ margin-top: 5px;
+}
+ 
+/**导航菜单**/
+.root{
+  height: 40px;
+  background-color: #fff;
+  
+}
+.dh{
+position: fixed; 
+  z-index: 998;
+  width: 100%;
+   display: flex;
+   flex-direction: row;
+ justify-content:space-around;
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+  background-color: #fff;
+  height: 30px;
+}
+.dh-txt01-true{
+    font-size: 16px;
+    color:#f99033;
+    font-weight: bold;
+    text-shadow:1px 1px 3px #fdc77e;
+}
+
+.dh-txt01-false{
+    font-size: 16px;
+    color: #999;
+}
+/**搜索栏**/
+.topss{
+position: fixed; 
+  z-index: 999;
+  width: 100%;
+   display: flex;
+   flex-direction: row;
+ justify-content:center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #fff;
+   opacity: 0.99;
+}
+.kuang{
+  width: 60%;
+   border: 1px solid #eee;
+   border-radius: 15px;
+   background-color: #eee;
+   color: #bbb;
+   font-size: 14px;
+   
+}
+/********************类目导航css***********************/
+.lmbox{
+  display: flex;
+  flex-direction:column;
+ justify-content:center;
+}
+.lmtxt{
+  font-size: 12px;
+  color: #bbb;
+  text-align: center;
+}
+.lmh{
+  width: 100%;
+   display: flex;
+  flex-direction:row;
+ justify-content:space-around;
+  margin-top: 5px;
+
+}
+.lmfq{
+    width: 100%;
+   
+}
