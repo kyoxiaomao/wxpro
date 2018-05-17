@@ -47,10 +47,7 @@
  <view class='sjhd-time'>【活动】一布一生手工秀包招募！ 2017/11/25 </view>
  </view>
 
-  <view class='sjhd-img' >
- <image class='sjhd-images'  src="https://www.citytk.com/citytk/zjjxhy000001/zs1.jpg" style="height:{{hdImgHH}}px;margin-top:10px;" />
- <view class='sjhd-time'>【活动】寒假暑期班开始报名啦！ 2017/11/25 </view>
- </view>
+  <!--底部留白-->
   <view class='root'></view>
  </view>
  
