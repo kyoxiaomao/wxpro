@@ -163,11 +163,12 @@ padding: 5px 5px 5px 5px;
 .fb{
 position: fixed; 
   z-index: 998;
-  width: 100%;
+ 
    display: flex;
    flex-direction: row;
  justify-content:flex-end;
 
+right: 0px;
 }
 .fb-biao{
     display: flex;
@@ -181,6 +182,7 @@ position: fixed;
   height: 50px;
  opacity: 0.8;
  margin-right: 2px;
+ 
 }
 .fb-biao-img2{
    background-image: url("http://www.citytk.com/citytk/images/wx01.png")  ;
@@ -192,6 +194,7 @@ position: fixed;
  opacity: 0.8;
  margin-right: 2px;
  margin-top: 5px;
+  
 }
  
 /**导航菜单**/

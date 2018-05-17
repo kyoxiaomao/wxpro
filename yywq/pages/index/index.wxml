@@ -24,12 +24,14 @@
  <view class='sjhd-box' >
  <view class='sjhd-title'><text class='sjhd-title-txt'>悠扬围棋</text><text class='sjhd-title-txt01' hidden='{{txthideflag}}' bindtap='bianjionClick'>编辑</text></view>
  <view class='sjhd-img' >
- <view class='sjhd-txt' bind:touchstart="starttap"  bind:touchend="endtap" bind:tap="touchtap" >橙色文化艺术中心 是一家别致的培训机构，我到那儿时，被满目的绿植所吸引，阿朱是这家培训机构的负责人，年纪不大，为人处事相当的稳重而且有耐心！ </view>
+ <view class='sjhd-txt' bind:touchstart="starttap"  bind:touchend="endtap" bind:tap="touchtap" >开办悠扬围棋七年了，围棋是一个很古朴的中国传统文化。很多妈妈把孩子送过来学棋，改变都很大，小孩出去后变得更加有专注力，更加坐得住，也学会了独立思考！ </view>
  </view>
   </view>
   <!--广告-->
  <view class='gg-box'>
- <view class='gg01' > <image src='../images/gg-01.jpg' class='gg01'></image></view>
+ <view class='gg01' > 
+ <image bindtap='ontu01' src='../images/gg-01.jpg' class='gg01'></image>
+ </view>
   <view class='gg02'>
       <view  class='gg02-01'><image src='../images/gg-02.jpg' class='gg02-01'></image></view>
        <view class='gg02-02'><image src='../images/gg-03.jpg' class='gg02-02' ></image>  </view>
@@ -41,10 +43,12 @@
 
  <!--商家活动-->
  <view class='sjhd-box'  >
- <view class='sjhd-title'><text class='sjhd-title-txt'>商家活动</text></view>
- <view class='sjhd-img' bindtap='sjonClick' >
- <image class='sjhd-images'  src="https://www.citytk.com/webhtml/z1.jpg" style="height:{{hdImgHH}}px;margin-top:10px;" />
- <view class='sjhd-time'>【活动】一布一生手工秀包招募！ 2017/11/25 </view>
+ <view class='sjhd-title'>
+ <text class='sjhd-title-txt'>商家活动</text>
+ </view>
+ <view class='sjhd-img' >
+ <image  bindtap='sjonClick' class='sjhd-images'  src="../images/z01.jpg" style="height:{{hdImgHH}}px;margin-top:10px;"></image>
+ <view class='sjhd-time'>【活动】绮园围棋，孩子们的快乐！ 2018/5/17 </view>
  </view>
 
   <!--底部留白-->

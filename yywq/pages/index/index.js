@@ -49,10 +49,11 @@ Page({
   //拨打电话
   ondianhua:function(){
     wx.makePhoneCall({
-      phoneNumber: '18157308858' //仅为示例，并非真实的电话号码
+      phoneNumber: '13656616234' //仅为示例，并非真实的电话号码
     })
   },
   sjonClick:function(){
+    console.log("点击跳转中")
     wx.navigateTo({
       url: '../sales/sales'
     })
@@ -85,10 +86,14 @@ Page({
      })
    }
  },
- bianjionClick:function(){
+ bianjionClick:function(e){
    wx.navigateTo({
      url: '../txtedit/txtedit'
    })
+ }
+ ,
+ ontu01:function(){
+  console.log("点击广告")
  }
  ,
   loadData: function (count) {
@@ -164,6 +169,12 @@ Page({
    // console.log(that.data.dhbottom)
     //that.loadData(5);
    // wx.stopPullDownRefresh();
+
+  },
+  /**
+  * 用户点击右上角分享
+  */
+  onShareAppMessage: function () {
 
   },
   //导航初始化
