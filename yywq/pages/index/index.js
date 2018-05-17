@@ -18,7 +18,7 @@ Page({
     dhtxtClass02: "dh-txt01-false",//导航02
     dhtxtClass03: "dh-txt01-false",//导航03
     dhtxtClass04: "dh-txt01-false",//导航04
-    dhbottom: false,//底部导航
+    dhbottom: true,//底部导航
     dhtop: true,//顶部导航
     touchstart:"",
     touchend:"",

@@ -2,7 +2,7 @@
 <!--index.wxml-->
 <view class="container"  >
  <!--轮播-->
-  <video src="https://daren.alicdn.com/O7Fv0OjxTfOZ9UzKaa6/0XeKU52HBEWYSjsOC4z%40%40sd.mp4" class="swiper"  style="height:{{whSwiper}}px;"     ></video>
+  <video src="https://daren.alicdn.com/O7Fv0OjxTfOZ9UzKaa6/Ww5HchgFPewTtnQL04m%40%40hd.mp4" class="swiper"  style="height:{{whSwiper}}px;"     ></video>
    <!--
      <swiper class="swiper"  style="height:{{whSwiper}}px;"  indicator-dots="true">
     <block wx:for="{{imgarr}}" wx:for-index="index">
@@ -22,7 +22,7 @@
 </view>
  <!--小编随语-->
  <view class='sjhd-box' >
- <view class='sjhd-title'><text class='sjhd-title-txt'>一布一生</text><text class='sjhd-title-txt01' hidden='{{txthideflag}}' bindtap='bianjionClick'>编辑</text></view>
+ <view class='sjhd-title'><text class='sjhd-title-txt'>悠扬围棋</text><text class='sjhd-title-txt01' hidden='{{txthideflag}}' bindtap='bianjionClick'>编辑</text></view>
  <view class='sjhd-img' >
  <view class='sjhd-txt' bind:touchstart="starttap"  bind:touchend="endtap" bind:tap="touchtap" >橙色文化艺术中心 是一家别致的培训机构，我到那儿时，被满目的绿植所吸引，阿朱是这家培训机构的负责人，年纪不大，为人处事相当的稳重而且有耐心！ </view>
  </view>
