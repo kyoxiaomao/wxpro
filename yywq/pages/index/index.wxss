@@ -98,12 +98,12 @@ page {
    flex-direction: column;
 }
 .gg02-01{
-   width: 180px;
+   width: 160px;
   height: 80px;
     background-color: #00fff0;
 }
 .gg02-02{
-   width: 180px;
+   width: 160px;
   height: 80px;
    
       background-color: #f0ff00;
