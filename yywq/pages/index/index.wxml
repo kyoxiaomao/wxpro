@@ -22,7 +22,7 @@
 </view>
  <!--小编随语-->
  <view class='sjhd-box' >
- <view class='sjhd-title'><text class='sjhd-title-txt'>悠扬围棋</text><text class='sjhd-title-txt01' hidden='{{txthideflag}}' bindtap='bianjionClick'>编辑</text></view>
+ <view class='sjhd-title'><image src='../images/h01.png' class='template-h'></image><text class='sjhd-title-txt'>悠扬围棋</text><text class='sjhd-title-txt01' hidden='{{txthideflag}}' bindtap='bianjionClick'>编辑</text></view>
  <view class='sjhd-img' >
  <view class='sjhd-txt' bind:touchstart="starttap"  bind:touchend="endtap" bind:tap="touchtap" >开办悠扬围棋七年了，围棋是一个很古朴的中国传统文化。很多妈妈把孩子送过来学棋，改变都很大，小孩出去后变得更加有专注力，更加坐得住，也学会了独立思考！ </view>
  </view>
@@ -44,6 +44,7 @@
  <!--商家活动-->
  <view class='sjhd-box'  >
  <view class='sjhd-title'>
+ <image src='../images/h01.png' class='template-h'></image>
  <text class='sjhd-title-txt'>商家活动</text>
  </view>
  <view class='sjhd-img' >
