@@ -15,5 +15,29 @@
     "navigationBarTitleText": "地精科技&悠扬围棋",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": false
+  } ,
+  "tabBar": {
+    "color":"#515151",
+    "selectedColor":"#f9cc00",
+    "borderStyle":"white",
+    "backgroundColor":"#ffffff",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "iconPath":"pages/images/sy01.png",
+      "selectedIconPath":"pages/images/sy001.png",
+      "text":"商家首页"},
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/sc01.png",
+        "selectedIconPath": "pages/images/sc001.png",
+        "text": "全城活动"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/yh01.png",
+        "selectedIconPath": "pages/images/yh001.png",
+        "text": "个人中心"
+      }
+    ]
   }
 }

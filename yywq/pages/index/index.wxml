@@ -3,23 +3,7 @@
 <view class="container"  >
  <!--轮播-->
   <video src="https://daren.alicdn.com/O7Fv0OjxTfOZ9UzKaa6/Ww5HchgFPewTtnQL04m%40%40hd.mp4" class="swiper"  style="height:{{whSwiper}}px;"     ></video>
-   <!--
-     <swiper class="swiper"  style="height:{{whSwiper}}px;"  indicator-dots="true">
-    <block wx:for="{{imgarr}}" wx:for-index="index">
-      <swiper-item>
-        <image src="{{item}}"    mode="aspectFill" />
-      </swiper-item>
-    </block>
-  </swiper> 
-   <!--商家信息--11>
-<view class='sjxx-box' hidden='true' >
-<text class='sjxx-box-title'>嘉兴地精科技有限公司</text>
-<text class='sjxx-box-industry'>IT/互联网·企业/公司</text>
-<view class='sjxx-box-address'><image  src="../images/T03.png" style="height:15px;width:15px;padding-right:5px;"  ></image>嘉兴市秀洲区中山西路2710号嘉欣丝绸工业园18号楼</view>
-<view class='sjxx-box-business' hidden='true'><image  src="../images/T01.png" style="height:15px;width:15px;padding-right:5px;"  ></image>8:00·23:00</view>
-<view class='sjxx-box-telephone2'><image  src="../images/T02.png" style="height:15px;width:15px;padding-right:5px;" ></image>  0573-86857676  </view>
-<view class='sjxx-box-telephone'><image  src="../images/T04.png" style="height:15px;width:15px;padding-right:5px;" ></image>  联系商家  </view>
-</view>
+   
  <!--小编随语-->
  <view class='sjhd-box' >
  <view class='sjhd-title'><image src='../images/h01.png' class='template-h'></image><text class='sjhd-title-txt'>悠扬围棋</text><text class='sjhd-title-txt01' hidden='{{txthideflag}}' bindtap='bianjionClick'>编辑</text></view>
@@ -30,11 +14,11 @@
   <!--广告-->
  <view class='gg-box'>
  <view class='gg01' > 
- <image bindtap='ontu01' src='../images/gg-01.jpg' class='gg01'></image>
+ <image bindtap='ontu01' src='../images/gg-01.jpg' class='gg01' mode="widthFix" ></image>
  </view>
   <view class='gg02'>
-      <view  class='gg02-01'><image src='../images/gg-02.jpg' class='gg02-01'></image></view>
-       <view class='gg02-02'><image src='../images/gg-03.jpg' class='gg02-02' ></image>  </view>
+      <view   ><image src='../images/gg-02.jpg' class='gg02-01' mode="widthFix"></image></view>
+       <view  ><image src='../images/gg-03.jpg' class='gg02-02' mode="widthFix" ></image>  </view>
       
      
   </view>
@@ -53,7 +37,7 @@
  </view>
 
   <!--底部留白-->
-  <view class='root'></view>
+  <view class='root' hidden='true'></view>
  </view>
  
   <!--浮标-->
@@ -66,7 +50,9 @@
       </view>
  <!--导航-->
   <view class="dh" style="bottom:0px;" hidden="{{dhbottom}}" >
-    <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">商家首页</text>
+  <view class='dh01'>
+  
+    <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">商家首页</text></view>
     <text class="{{dhtxtClass02}}"  hidden="true" bindtap="dhtxt02Cllick">互动社区</text>
     <text class="{{dhtxtClass03}}" bindtap="dhtxt03Cllick">全城活动</text>
     <text class="{{dhtxtClass04}}" bindtap="dhtxt04Cllick">个人中心</text>

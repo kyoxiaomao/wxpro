@@ -23,6 +23,8 @@ Page({
     touchstart:"",
     touchend:"",
     txthideflag:true,
+    wImage01:"",//广告图01宽度
+    wImage02: "",//广告图02宽度
   },
   onLoad: function () {
     var that = this
@@ -32,9 +34,10 @@ Page({
         that.setData({
           wwSystemWidth: res.windowWidth,
           whSystemHeight: res.windowHeight,
-
           whSwiper: res.windowWidth *280/520,
           hdImgHH: 300 / (650 / res.windowWidth),
+          wImage01: res.windowWidth *0.55,
+          wImage02: res.windowWidth * 0.45,
         })
       }
     })
