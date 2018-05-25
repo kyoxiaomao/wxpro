@@ -24,7 +24,8 @@ Page({
     touchend:"",
     txthideflag:true,
     wImage01:"",//广告图01宽度
-    wImage02: "",//广告图02宽度
+    hImage01: "",//广告图01高度
+  
   },
   onLoad: function () {
     var that = this
@@ -36,12 +37,14 @@ Page({
           whSystemHeight: res.windowHeight,
           whSwiper: res.windowWidth *280/520,
           hdImgHH: 300 / (650 / res.windowWidth),
-          wImage01: res.windowWidth *0.55,
-          wImage02: res.windowWidth * 0.45,
+
+          wImage01: res.windowWidth *0.333-5,
+          hImage01: 160/(130/(res.windowWidth * 0.333 - 5)),
+
         })
       }
     })
-    console.log("T00:设备宽度" + that.data.wwSystemWidth + "|设备高度" + that.data.whSystemHeight)
+    console.log("T00:设备宽度" + that.data.wwSystemWidth + "|设备高度" + that.data.whSystemHeight + "|广告图片" + that.data.wImage01)
     
    
     this.dhInit();//初始化导航

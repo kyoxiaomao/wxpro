@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="container">
+  <view  class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+     <view class="infoH">
+      <view class="infoH1">
+      <text class="userinfo-lv">Lv{{userlv}}</text>
+       <image class="userinfo-xg" src="../images/xg-icon.png" background-size="cover" bindtap="xuyuanClick"></image>
+      <text class="flag-wz">x{{xgflag}}</text>
+      <image  hidden="true" class="userinfo-yx" src="../images/yx-icon.png" background-size="cover"></image>
+       <text  hidden="true" class="flag-wz">x{{xjflag}}</text>
+      <image hidden="true" class="userinfo-qd" src="../images/qd-icon.png" background-size="cover"></image>
+      <text hidden="true"  class="flag-wz">x6</text>
+      </view>
+      <text class="userinfo-gg1">公告:</text>
+       <text class="userinfo-gg{{ggcssnum}}">恭喜花猫实现了新年星愿！</text>
+      </view>
+       <image class="userinfo-wf" bindtap="funwf" src="../images/wf-icon.png" background-size="cover"></image>
+  </view>
+
+  <view class="content" style="height:{{cttww}}px;" id="ctt">
+    <text class="user-motto" hidden="true">设备宽:{{ww}}，设备高:{{wh}}</text>
+     <image wx:for="{{images}}" wx:key="id" id="{{item.id}}"  class="xx0{{item.num}}" style="top:{{item.xxtop}}px;left:{{item.xxleft}}px;width:{{item.xxwidth}}px;height:{{item.xxheight}}px;" bindtap="onClickEvent" animation="{{animationData}}" src="../images/xx01-icon.png" background-size="cover" ></image>
+     
+
+     <view id="vcontent01" hidden="{{vconhid}}">
+             <image class="kp01" src="../images/kp01.png" style="width:{{kp01ww}}px;height:{{kp01wh}}px;top:{{kp01top}}px;" background-size="cover"  ></image>
+    <textarea class="ta01" style="top:{{ta01top}}px;left:{{ta01left}}px;width:{{ta01width}}px;height:{{ta01height}}px;"  placeholder="请填写您的新年愿望！" bindblur="taContextEvent" bindinput="taInputinputEvent" value="{{tacontext}}"  name="textarea"/>
+   <text class="tflag01" style="top:{{tttop}}px;left:{{ttleft}}px;">{{ttflag}}</text>
+ <image class="vbt01"  src="../images/vbt01.jpg" hidden="true" bindtap="choosevideo"  style="top:{{vtb01top}}px;left:{{vtb01left}}px;width:{{vtb01width}}px;height:{{vtb01height}}px;" ></image>
+        <image src="../images/tb01.png" class="tb01"  style="top:{{tb01top}}px;left:{{tb01left}}px;width:{{tb01width}}px;height:{{tb01height}}px;" bindtap="bindFormSubmit"> 提交 </image>
+        <video class="vd01" hidden="{{hid}}" style="top:{{vtb01top}}px;left:{{vtb01left}}px;width:{{vtb01width}}px;height:{{vtb01height}}px;"   objectFit="fill" src="{{urlsrc}}"  controls="false"></video>
+  <image class="xyxx" style="width:{{xyxxww}}px;height:{{xyxxwh}}px;left:{{xyxxleft}}px;top:{{xyxxtop}}px;"   bindtap="funxxclose" src="../images/xx-icon.png"   ></image>
+ </view>
+
+ <view id="vcontent02" hidden="{{v02hid}}" >
+ <image class="kp02" style="width:{{xy01ww}}px;height:{{xy01wh}}px;left:{{xy01left}}px;top:{{xy01top}}px;"  src="../images/xymb.png"></image>
+  <text class="xgtitle" style="top:{{xgtitletop}}px;left:{{xgtitleleft}}px;">来自{{xgtitle}}的新年星愿</text>
+<image class="xxicon" style="width:{{xxiconww}}px;height:{{xxiconwh}}px;left:{{xxiconleft}}px;top:{{xxicontop}}px;"  src="../images/xx-icon.jpg"  bindtap="xxOnClick"></image>
+
+ <textarea class="xgcontent"  disabled="{{true}}" id="ta" style="height:{{xgcontentwh}}px;width:{{xgcontentww}}px;top:{{xgcontenttop}}px;left:{{xgcontentleft}}px;" value="{{xgcontent}}"></textarea>
+<image class="video01" style="width:{{videoww}}px;height:{{videowh}}px;left:{{videoleft}}px;top:{{videotop}}px;"  src="../images/jj.jpg"></image>
+<image class="zficon" style="width:{{zficonww}}px;height:{{zficonwh}}px;left:{{zficonleft}}px;top:{{zficontop}}px;"  src="../images/zf-icon.png"  bindtap="zfOnClick"></image>
+<text class="zfflag" style="top:{{zfflagtop}}px;left:{{zfflagleft}}px;">{{zfflag}}</text>
+ </view>
+  
+<view id="vcontent03" hidden="{{wf01hid}}" >
+<image class="wfcss" style="width:{{wf01ww}}px;height:{{wf01wh}}px;left:{{wf01left}}px;top:{{wf01top}}px;"  src="../images/wfbg.png"   ></image>
+  <image class="wfxx" style="width:{{wfxxww}}px;height:{{wfxxwh}}px;left:{{wfxxleft}}px;top:{{wfxxtop}}px;"   bindtap="funwfclose" src="../images/xx-icon.jpg"   ></image>
+ </view>
+
+  </view>
+  
+</view>

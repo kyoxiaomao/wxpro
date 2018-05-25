@@ -2,7 +2,7 @@
 <!--index.wxml-->
 <view class="container"  >
  <!--轮播-->
-  <video src="https://daren.alicdn.com/O7Fv0OjxTfOZ9UzKaa6/Ww5HchgFPewTtnQL04m%40%40hd.mp4" class="swiper"  style="height:{{whSwiper}}px;"     ></video>
+  <video src="https://daren.alicdn.com/O7Fv0OjxTfOZ9UzKaa6/Ww5HchgFPewTtnQL04m%40%40hd.mp4" poster="http://www.citytk.com/citytk/yywq/fengmian.jpg" class="swiper"  style="height:{{whSwiper}}px;"     ></video>
    
  <!--小编随语-->
  <view class='sjhd-box' >
@@ -12,19 +12,15 @@
  </view>
   </view>
   <!--广告-->
+  <view class='gg'>
+   <view class='sjhd-title'><image src='../images/h01.png' class='template-h'></image><text class='sjhd-title-txt'>商家风采
+  </text><text class='sjhd-title-txt01' hidden='{{txthideflag}}' bindtap='bianjionClick'>编辑</text></view>
  <view class='gg-box'>
- <view class='gg01' > 
- <image bindtap='ontu01' src='../images/gg-01.jpg' class='gg01' mode="widthFix" ></image>
+ <image src='../images/gg01.jpg' style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
+ <image src='../images/gg02.jpg' style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
+ <image src='../images/gg03.jpg' style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
  </view>
-  <view class='gg02'>
-      <view   ><image src='../images/gg-02.jpg' class='gg02-01' mode="widthFix"></image></view>
-       <view  ><image src='../images/gg-03.jpg' class='gg02-02' mode="widthFix" ></image>  </view>
-      
-     
-  </view>
-
- </view>
-
+</view>
  <!--商家活动-->
  <view class='sjhd-box'  >
  <view class='sjhd-title'>

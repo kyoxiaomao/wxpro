@@ -1,0 +1,10 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  box-sizing: border-box;
+  background-color: #00ffff;
+ 
+} 

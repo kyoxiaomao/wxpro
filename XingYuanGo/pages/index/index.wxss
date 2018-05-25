@@ -1,0 +1,184 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  font-size: 14px;
+  width: 100%;
+}
+.infoH{
+ width: 480rpx;
+}
+.infoH1{
+    display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  font-size: 14px;
+margin-top: 10rpx;
+}
+/*头像*/
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+
+}
+/*等级*/
+.userinfo-lv{
+  font-size: 18px;
+  font-weight: bold;
+   color: #ffffff;
+  
+}
+/*小标文字样式*/
+.flag-wz{
+  color: #fff;
+  margin-left: 10rpx;
+  margin-top: 7rpx;
+}
+/*星光图标*/
+.userinfo-xg{
+  width: 52rpx;
+  height: 52rpx;
+ margin-left: 20rpx;
+}
+
+/*邮箱图标*/
+.userinfo-yx{
+  width: 52rpx;
+  height: 52rpx;
+ margin-left: 15rpx;
+}
+
+/*签到图标*/
+.userinfo-qd{
+  width: 48rpx;
+  height: 48rpx;
+margin-left: 15rpx;
+}
+/*公告栏*/
+
+.userinfo-gg1{
+ 
+  color: #ffffff;
+}
+.userinfo-gg2{
+ 
+  color: #ffff00;
+}
+.userinfo-gg3{
+ 
+  color: #ff0000;
+}
+/*玩法图标*/
+.userinfo-wf{
+   width: 90rpx;
+  height: 90rpx;
+  margin-top: 10rpx;
+  margin-left: auto;
+  margin-right: 15rpx;
+  
+}
+/*主体内容区*/
+.content {
+   font-size: 14px;
+}
+.user-motto{
+  color: #ffffff;
+}
+.kp01{
+  position: absolute;
+  left: 1px;
+  
+}
+.kp02{
+  position: absolute;
+}
+.xxicon{
+   position: absolute;
+}
+.ta01{
+  color: #ffffff;
+  position: absolute;
+}
+.tb01{
+  position: absolute;
+}
+.xx01{
+  position: absolute;
+  
+  
+}
+.tflag01{
+  color: #ffffff;
+  font-size: 11px;
+  position: absolute;
+}
+.xx00{
+
+  position: absolute;
+  visibility:hidden;
+}
+.vbt01{
+   position: absolute;
+   width: 63px;
+   height: 63px;  
+}
+.video01{
+   position: absolute;
+}
+.zficon{
+   position: absolute;
+}
+.vd01{
+   position: absolute;
+}
+.vcontent02{
+  background-color: #ffffff;
+
+}
+.xx02{
+  width:100rpx;
+  height: 145rpx;
+  top: 100px;
+  left: 50px;
+  position: absolute;
+  
+}
+.container {
+  background-image: url("https://www.citytk.com/bg.jpg") ;
+  background-size: 100%;
+} 
+.xgtitle{
+position: absolute;
+   color: #ffffff;
+   font-size: 14px;
+ 
+}
+.xgcontent{
+    position: absolute;
+   color: #ffffff;
+   font-size: 14px;
+    font-weight: bold; 
+    
+}
+.zfflag{
+   position: absolute;
+   color: #fd80bd;
+   font-size: 16px;
+    font-weight: bold; 
+}
+.wfcss{
+   position: absolute;
+}
+.wfxx{
+   position: absolute;
+}
+.xyxx{
+   position: absolute;
+}
+.vcontent03{
+  background-color: #ffffff;
+
+}
