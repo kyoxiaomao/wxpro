@@ -169,6 +169,8 @@ right: 0px;
   height: 48px;
  opacity: 1.0;
  margin-right: 2px;
+
+ margin-top: 10px;
  
 }
 .fb-biao-img2{
@@ -180,7 +182,19 @@ right: 0px;
   height: 48px;
  opacity: 1.0;
  margin-right: 2px;
- margin-top: 15px;
+ margin-top: 10px;
+  
+}
+.fb-biao-img3{
+   background-image: url("http://www.citytk.com/citytk/images/fx.png")  ;
+   background-position: 50% 50%;
+  background-size: 48px 48px;
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+ opacity: 1.0;
+ margin-right: 2px;
+ margin-top: 10px;
   
 }
  

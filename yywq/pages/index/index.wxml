@@ -39,7 +39,7 @@
   <!--浮标-->
     <view class="fb" style="bottom:100px;" >
     <view class='fb-biao'>
- 
+          <button open-type="share"  bindtap='fenxiang'  class='fb-biao-img3'> </button>
            <button  bindtap='ondianhua'  class='fb-biao-img1'> </button>
          <button  open-type="contact" class='fb-biao-img2'> </button>
     </view>
