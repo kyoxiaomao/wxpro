@@ -93,7 +93,7 @@ Page({
             success: function (res) {
               console.log("授权成功");
               wx.getImageInfo({
-                src: '../images/fxpage.jpg',
+                src: '../images/fxpage01.jpg',
                 success: function (res) {
                   console.log(res.path)
                   wx.saveImageToPhotosAlbum({
