@@ -1,0 +1,4 @@
+<!--pages/fenxiang/fenxiang.wxml-->
+<view class='content'>
+<image bindlongpress='imgOnclick' bindtouchstart='timestart' bindtouchend='timeend'  src='../images/fxpage.jpg' style='width:{{wImage01}}px;height:{{hImage01}}px;'    mode='aspectFill'></image>
+</view>

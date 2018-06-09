@@ -5,8 +5,8 @@
     "pages/sousuo/sousuo",
     "pages/city/city",
     "pages/sales/sales",
-          "pages/txtedit/txtedit"
- 
+      "pages/txtedit/txtedit",
+  "pages/fenxiang/fenxiang"
     
   ],
   "window": {

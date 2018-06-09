@@ -36,10 +36,31 @@
   <view class='root' hidden='true'></view>
  </view>
  
+  <!--分享-->
+  <view class="fx" style="bottom:-20px;" hidden='{{fxonoff}}' >
+ <view class='fx01'>
+ <view>
+ <button bindtap='fxpageOnclick'  class='fx-biao-img02'   style="width:50px;height:50px;background-image:url(http://www.citytk.com/citytk/images/fx01.png);"  ></button></view>
+ <view>
+ <text class='fx-text-01'>生成海报分享到朋友圈</text>
+ <text  class='fx-text-02'>></text>
+ </view>
+ </view> 
+
+  <view class='fx01'>
+ <view>
+ <button open-type="share"  class='fx-biao-img02'   style="width:50px;height:50px;background-image:url(http://www.citytk.com/citytk/images/fx02.png);"  ></button></view>
+ <view>
+ <text class='fx-text-01'>分享给朋友或微信群</text>
+ <text  class='fx-text-02'>></text>
+ </view>
+ </view> 
+   <view class='fx-off'  bindtap='fenxiangOff' >取消</view>
+  </view>
   <!--浮标-->
     <view class="fb" style="bottom:100px;" >
     <view class='fb-biao'>
-          <button open-type="share"  bindtap='fenxiang'  class='fb-biao-img3'> </button>
+          <button   bindtap='fenxiangOn'  class='fb-biao-img3'> </button>
            <button  bindtap='ondianhua'  class='fb-biao-img1'> </button>
          <button  open-type="contact" class='fb-biao-img2'> </button>
     </view>

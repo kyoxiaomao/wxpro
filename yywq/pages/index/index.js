@@ -25,6 +25,7 @@ Page({
     txthideflag:true,
     wImage01:"",//广告图01宽度
     hImage01: "",//广告图01高度
+    fxonoff:true,//分享页面
   
   },
   onLoad: function () {
@@ -180,8 +181,27 @@ Page({
   /**
   * 用户点击右上角分享
   */
+  fenxiangOn:function(){
+    var that=this;
+    that.setData({
+      fxonoff:false,
+    })
+
+  },
+  fenxiangOff: function () {
+    var that = this;
+    that.setData({
+      fxonoff: true,
+    })
+
+  },
   onShareAppMessage: function () {
 
+  },
+  fxpageOnclick:function(){
+    wx.redirectTo({
+      url: '../fenxiang/fenxiang'
+    })
   },
   //导航初始化
   dhInit: function () {
