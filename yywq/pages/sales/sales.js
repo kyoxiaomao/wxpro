@@ -5,14 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    url:"",//文章链接
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    if (options.conId!=""){
+      var _url = "https://mp.weixin.qq.com/s/" + options.conId;
+          console.log("加载链接：" + _url);
+        that.setData({
+          url:_url
+        })
+        }else{
+          console.log("没有加载到参数")
+        }
+   
+
   },
 
   /**

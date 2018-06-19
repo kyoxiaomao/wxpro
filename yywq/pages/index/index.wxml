@@ -16,9 +16,9 @@
    <view class='sjhd-title'><image src='../images/h01.png' class='template-h'></image><text class='sjhd-title-txt'>商家风采
   </text><text class='sjhd-title-txt01' hidden='{{txthideflag}}' bindtap='bianjionClick'>编辑</text></view>
  <view class='gg-box'>
- <image src='../images/gg01.jpg' style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
- <image src='../images/gg02.jpg' style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
- <image src='../images/gg03.jpg' style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
+ <image src='../images/gg01.jpg' bindtap='sjonClick' data-conid="6shIfscUt3IB-ko1ra5sMA" style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
+ <image src='../images/gg02.jpg' bindtap='sjonClick' data-conid="h7P059z8SNqu_9FWoDZqMA" style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
+ <image src='../images/gg03.jpg' bindtap='sjonClick' data-conid="tnRCJDp5f8B99jWrcRmgDQ" style='width:{{wImage01}}px;height:{{hImage01}}px;' class='ggImagecss'></image>
  </view>
 </view>
  <!--商家活动-->
@@ -28,7 +28,7 @@
  <text class='sjhd-title-txt'>商家活动</text>
  </view>
  <view class='sjhd-img' >
- <image  bindtap='sjonClick' class='sjhd-images'  src="../images/z01.jpg" style="height:{{hdImgHH}}px;margin-top:10px;"></image>
+ <image  bindtap='sjonClick' data-conid="ykIcX98u3UlHnSTHNRDlOQ" class='sjhd-images'  src="../images/z01.jpg" style="height:{{hdImgHH}}px;margin-top:10px;"></image>
  <view class='sjhd-time'>【活动】绮园围棋，孩子们的快乐！ 2018/5/17 </view>
  </view>
 

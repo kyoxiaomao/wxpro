@@ -59,10 +59,12 @@ Page({
       phoneNumber: '13656616234' //仅为示例，并非真实的电话号码
     })
   },
-  sjonClick:function(){
-    console.log("点击跳转中")
+  sjonClick:function(e){
+    var conId = e.target.dataset.conid;
+    var _url = '../sales/sales?conId=' + conId;
+    console.log("点击跳转中,conId=" + conId)
     wx.navigateTo({
-      url: '../sales/sales'
+      url: _url,
     })
   }
   ,
