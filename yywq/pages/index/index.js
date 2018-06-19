@@ -201,7 +201,8 @@ Page({
 
   },
   fxpageOnclick:function(){
-    wx.redirectTo({
+    //
+    wx.navigateTo({
       url: '../fenxiang/fenxiang'
     })
   },
