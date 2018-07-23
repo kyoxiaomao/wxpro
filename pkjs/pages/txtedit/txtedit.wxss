@@ -1,0 +1,21 @@
+/* pages/txtedit.wxss */
+.box{
+  width: 100%;
+ 
+ 
+}
+.section{
+  width:  100%;
+  border:   1px #ddd solid; 
+}
+.daan{
+    width: 100%;
+ display: flex;
+ flex-direction:column;
+}
+.checkbox{
+  width: 100%;
+ display: flex;
+flex-direction:row;
+
+}

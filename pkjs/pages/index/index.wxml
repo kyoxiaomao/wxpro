@@ -1,0 +1,87 @@
+
+<!--index.wxml-->
+<view class="container"  >
+ <!--轮播-->
+  <video src="https://daren.alicdn.com/O7Fv0OjxTfOZ9UzKaa6/Ww5HchgFPewTtnQL04m%40%40hd.mp4" poster="http://www.citytk.com/citytk/yywq/fengmian.jpg" class="swiper"  style="height:{{whSwiper}}px;"     >
+  </video>
+   
+ <!--小编随语-->
+ <view class='sjhd-box' >
+ <view class='sjhd-title'><image src='../images/h01.png' class='template-h'></image><text class='sjhd-title-txt'>知识竞赛</text></view>
+ <view class='sjhd-img' >
+ <view class='sjhd-txt'  >
+ <view  class='sjhd-txt-01' bindtap='datiClick'><text >西塘桥街道</text><text>{{mydata}}分</text></view>
+ <view  class='sjhd-txt-02'>58%</view>
+ <view  class='sjhd-txt-03'>42%</view>
+ <view  class='sjhd-txt-04' bindtap='datiClick'><text>教育团工委</text><text>420分</text></view>
+ </view>
+ </view>
+  </view>
+  <!--广告-->
+  <view class='gg'>
+   <view class='sjhd-title'><image src='../images/h01.png' class='template-h'></image><text class='sjhd-title-txt'>积分规则
+  </text> </view>
+ <view class='gg-box'>
+每个用户进入后选择站队进行答题，每个人参与活动就加1分，答对1题加1分，完成答题后将结算分数实时加入相应站队。。
+ </view>
+</view>
+ <!--商家活动-->
+ <view class='sjhd-box'  >
+ <view class='sjhd-title'>
+ <image src='../images/h01.png' class='template-h'></image>
+ <text class='sjhd-title-txt'>比赛赛制</text>
+ </view>
+ <view class='sjhd-img' >
+ <image  bindtap='sjonClick' data-conid="ykIcX98u3UlHnSTHNRDlOQ" class='sjhd-images'  src="../images/z01.png" style="height:{{hdImgHH}}px;margin-top:10px;"></image>
+ <view class='sjhd-time'>【第一组】 </view>
+ </view>
+ <view class='sjhd-img' >
+ <image  bindtap='sjonClick' data-conid="ykIcX98u3UlHnSTHNRDlOQ" class='sjhd-images'  src="../images/z02.png" style="height:{{hdImgHH}}px;margin-top:10px;"></image>
+ <view class='sjhd-time'>【第二组】 </view>
+ </view>
+
+  <!--底部留白-->
+  <view class='root' hidden='true'></view>
+ </view>
+ 
+  <!--分享-->
+  <view class="fx" style="bottom:-20px;" hidden='{{fxonoff}}' >
+ <view class='fx01'>
+ <view>
+ <button bindtap='fxpageOnclick'  class='fx-biao-img02'   style="width:50px;height:50px;background-image:url(http://www.citytk.com/citytk/images/fx01.png);"  ></button></view>
+ <view>
+ <text class='fx-text-01'>生成海报分享到朋友圈</text>
+ <text  class='fx-text-02'>></text>
+ </view>
+ </view> 
+
+  <view class='fx01'>
+ <view>
+ <button open-type="share"  class='fx-biao-img02'   style="width:50px;height:50px;background-image:url(http://www.citytk.com/citytk/images/fx02.png);"  ></button></view>
+ <view>
+ <text class='fx-text-01'>分享给朋友或微信群</text>
+ <text  class='fx-text-02'>></text>
+ </view>
+ </view> 
+   <view class='fx-off'  bindtap='fenxiangOff' >取消</view>
+  </view>
+  <!--浮标-->
+    <view class="fb" style="bottom:100px;" >
+    <view class='fb-biao'>
+          <button hidden='true'  bindtap='fenxiangOn'  class='fb-biao-img3'> </button>
+           <button hidden='true'  bindtap='ondianhua'  class='fb-biao-img1'> </button>
+         <button hidden='true' open-type="contact" class='fb-biao-img2'> </button>
+    </view>
+      </view>
+ <!--导航-->
+  <view class="dh" style="bottom:0px;" hidden="{{dhbottom}}" >
+  <view class='dh01'>
+  
+    <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">商家首页</text></view>
+    <text class="{{dhtxtClass02}}"  hidden="true" bindtap="dhtxt02Cllick">互动社区</text>
+    <text class="{{dhtxtClass03}}" bindtap="dhtxt03Cllick">全城活动</text>
+    <text class="{{dhtxtClass04}}" bindtap="dhtxt04Cllick">个人中心</text>
+  </view>
+  
+</view>
+ 

@@ -1,0 +1,19 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/sousuo/sousuo",
+    "pages/city/city",
+    "pages/sales/sales",
+      "pages/txtedit/txtedit",
+  "pages/fenxiang/fenxiang"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "知识竞赛",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  } 
+}
