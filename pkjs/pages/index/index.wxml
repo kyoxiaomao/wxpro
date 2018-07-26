@@ -2,7 +2,7 @@
 <!--index.wxml-->
 <view class="container"  >
  <!--轮播-->
-  <video src="https://daren.alicdn.com/O7Fv0OjxTfOZ9UzKaa6/Ww5HchgFPewTtnQL04m%40%40hd.mp4" poster="http://www.citytk.com/citytk/yywq/fengmian.jpg" class="swiper"  style="height:{{whSwiper}}px;"     >
+  <video src="https://daren-auth.alicdn.com/O7Fv0OjxTfOZ9UzKaa6/Ww5HchgFPewTtnQL04m@@hd.mp4?auth_key=1532399608-0-0-9c5fe6ef14b775cd71775201b81bf28f" poster="http://www.citytk.com/citytk/yywq/fengmian.jpg" class="swiper"  style="height:{{whSwiper}}px;"     >
   </video>
    
  <!--小编随语-->
