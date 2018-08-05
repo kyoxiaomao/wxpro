@@ -1,51 +1,13 @@
-
-<!--index.wxml-->
-<view class="container"  >
-  <view class=' choose'>
-  <view><radio-group class="radio-group" bindchange="radioChange">
-  <label class="radio" wx:for="{{items}}">
-    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
-</radio-group></view>
-
-<view class='xian'>海盐 桐乡  秀洲区  南湖区</view>
-<view class='xian'> 海宁   平湖   嘉善</view>
-  </view>
- <!--推荐活动-->
- <view class='tjhd' >
- <view class='tjhd-title'><text style='margin-left:10px;'>火爆活动</text></view>
- <view class='tjhd-hdimg'  >
- <image src='../images/d01.jpg'style="width:{{tjhdIMGWW}}px;height:{{tjhdIMGHH}}px;"></image>
- <image src='../images/d02.jpg'style="width:{{tjhdIMGWW}}px;height:{{tjhdIMGHH}}px;"></image>
- <image src='../images/d03.jpg'style="width:{{tjhdIMGWW}}px;height:{{tjhdIMGHH}}px;"></image></view>
- </view>
- <!--商家活动-->
- <view class='sjhd-box'  >
- <view class='sjhd-title'><image  src="../images/hd01.png" style="height:14px;width:105px;padding-right:5px;" />商家活动<image  src="../images/hd02.png" style="height:14px;width:105px;padding-left:5px;" /></view>
- <view class='sjhd-img'  >
- <image class='sjhd-images'  src="../images/hdimg01.jpg" style="height:{{hdImgHH}}px;margin-top:10px;" />
- <view class='sjhd-time'>【活动】2017/11/25 </view>
- </view>
-  <view class='sjhd-img'   >
- <image class='sjhd-images'  src="../images/hdimg02.jpg" style="height:{{hdImgHH}}px;margin-top:10px;" />
- <view class='sjhd-time'>【活动】2017/11/25 </view>
- </view>
-  <view class='root'></view>
- </view>
- <!--查询功能-->
-  <view class="topss" style="top:0px;">
-  <view class="kuang" bindtap='ssClick'>
-  <image style="width:16px;height:16px;margin-left:5px;margin-right:5px;opacity:0.5;"  src="../images/ddcx.png" />输入查询关键词</view>
-  <image style="width:22px;height:22px;margin-left:5px;margin-right:5px;opacity:0.5;"  src="../images/kefu.png" />
-    <text style="color:#999;">客服</text>
-  </view> 
-  
-  
-  <view class="dh" style="bottom:0px;" hidden="{{dhbottom}}" >
-    <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">商家首页</text>
-    <text class="{{dhtxtClass02}}"  hidden="true" bindtap="dhtxt02Cllick">招聘群管</text>
-    <text class="{{dhtxtClass03}}" bindtap="dhtxt03Cllick">全城活动</text>
-    <text class="{{dhtxtClass04}}" bindtap="dhtxt04Cllick">优惠商品</text>
-  </view>
-  
+<!--pages/city/city.wxml-->
+<view class='bg'>
+ <view class='cont' style='width:{{syWidth}}px;height:{{syHeight}}px;'>
+<view class='btfb' style='left:{{(syWidth-219)/2}}px;'>
+<image class='bt' bindtap='lxonClick' src='../images/bt-lx.png' style='width:219px;height:45px;'></image>
+<image class='bt' bindtap='pkonClick' src='../images/bt-pk.png' style='width:219px;height:45px;'></image>
+</view>
+<view class='fb'>
+<image class='kg' bindtap='kgMusicOnClick' src='../images/{{kgUrlMusic}}.png' style='width:24px;height:15px;'></image>
+<image class='kg' src='../images/{{lbUrlMusic}}.png' style='width:15px;height:15px;'></image>
+</view>
+</view>
 </view>

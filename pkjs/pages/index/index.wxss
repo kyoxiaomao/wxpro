@@ -108,17 +108,16 @@ page {
    width: 100%;
    display:flex;
    flex-direction:row;
-   justify-content: flex-start;
-   align-items:baseline;
-   vertical-align: bottom;
- 
-  
+   justify-content:center;
+   align-items: center;
+   background-color: #b70609;
    border-bottom: 1px #ddd solid; 
+  
 }
 .sjhd-title-txt{
-    font-size: 16px;
+    font-size: 18px;
 padding: 5px 5px 5px 5px;
-   color: #515151;
+   color: #fff;
    font-weight: bold;
 }
 .sjhd-title-txt01{
@@ -127,7 +126,7 @@ padding: 5px 5px 5px 5px;
    color: #00fff0;
    font-weight: bold;
 }
-.sjhd-img{
+.sjhd-sssk{
   width: 100%;
   display:flex;
   flex-direction: column;
@@ -151,29 +150,64 @@ padding: 5px 5px 5px 5px;
    margin-top: 5px;
    
 }
-.sjhd-txt-01{
+.pk{
+  
+  width: 100%;
+  color: #b60005;
+  font-weight: bolder;
+  display: flex;
+  justify-content:center;
+  align-items:flex-end;
+  height: 35px;
+  font-size: 24px;
+}
+.sjhd-txt-hd{
   display: flex;
   flex-direction:column;
-  width: 130px;
+  width: 100px;
+  height: 50px;
+  margin-left: 1px;
+  margin-right: 5px;
+  background-image: url("http://www.citytk.com/citytk/pkjs/images/hd-jfpan.png");
+  color: #fff;
+  justify-content: center;
 }
-.sjhd-txt-04{
+.sjhd-txt-ld{
   display: flex;
- flex-direction:column;
-  width: 130px;
+  flex-direction:column;
+  width: 100px;
+  height: 50px;
+  margin-right: 3px;
+  margin-left: 2px;
+  background-image: url("http://www.citytk.com/citytk/pkjs/images/ld-jfpan.png");
+  color: #fff;
+  justify-content: center;
+ 
+}
+.jf-jindutiao{
+   display:flex;
+   flex-direction:row;
+   justify-content: flex-start;
+   padding-top: 3px;
+   /*align-items:center;/*垂直居中*/
+  
+ 
 }
 .sjhd-txt-02{
-  width: 60%;
-  background-color: blue;
+  width: 30%;
+  background-color:#d82d32;
   color: #fff;
-  line-height:50px;
-  height: 50px;
+  line-height:28px;
+  height: 28px;
+   border-radius: 10px 0px 0px 10px;
 }
 .sjhd-txt-03{
-  width: 40%;
-  background-color: red;
+  width: 90%;
+  background-color:#3163dc;
   color: #fff;
-  line-height:50px;
-  height: 50px;
+  line-height:28px;
+  height: 28px;
+   border-radius: 0px 10px 10px 0px;
 }
 /**分享页**/
 .fx{
