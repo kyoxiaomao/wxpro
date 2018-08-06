@@ -1,15 +1,18 @@
 <!--pages/txtedit.wxml-->
-<text style='font-size:14px;'>请选择一个正确答案</text>
-<view class="box"  >
-  <view>1．中国共产主义青年团是中国共产党领导的先进青年的 ，是广大青年在实践中
-学习中国特色社会主义和共产主义的学校，是中国共产党的助手和后备军。（ ）</view>
-<view >
-<radio-group bindchange="checkboxChange" class="daan">
-  <label class="checkbox" wx:for="{{items}}" >
-    <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
-</radio-group>
+<view class='bg'>
+<view class="box"  style='width:{{syWidth}}px;height:{{syHeight}}px;'  >
+  <view class='timu'><text>{{timu}}</text></view>
+<view class='daanban'>
+
+<view class='imgboxa' bindtap='btanda' data-daan="A" style='width:{{anbtWW}}px;height:{{anbtHH}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansa}}</text></view>
+<view class='imgboxb' bindtap='btanda' data-daan="B" style='width:{{anbtWW}}px;height:{{anbtHH}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansb}}</text></view>
+<view class='imgboxc' bindtap='btanda' data-daan="C" style='width:{{anbtWW}}px;height:{{anbtHH}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansc}}</text></view>
+<view class='imgboxd' bindtap='btanda' data-daan="D" style='width:{{anbtWW}}px;height:{{anbtHH}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansd}}</text></view>
+ 
+<text class='antxt'>{{tishi}}</text>
+<image class='xiayiticss' bindtap='xiayitionclick' src='../images/xiayiti.png' style='width:{{tibtWW}}px;height:{{tibtHH}}px;'></image>
 </view>
 </view>
 <button hidden='{{t}}' bindtap='huanti'>{{yy}}</button>
 <view hidden='{{t}}'>{{context}}</view>
+</view>

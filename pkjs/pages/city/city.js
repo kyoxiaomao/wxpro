@@ -26,7 +26,7 @@ Page({
         })
       }
     })
-   // this.onMusic();
+    this.onMusic();//开启音乐
   },
 
   /**

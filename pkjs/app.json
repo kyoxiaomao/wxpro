@@ -1,11 +1,13 @@
 {
   "pages": [
+      "pages/city/city",
+        "pages/index/index",
+    "pages/txtedit/txtedit",
 
-    "pages/index/index",
     "pages/sousuo/sousuo",
-   "pages/city/city",
+
     "pages/sales/sales",
-      "pages/txtedit/txtedit",
+  
   "pages/fenxiang/fenxiang"
     
   ],

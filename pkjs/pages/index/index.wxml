@@ -12,22 +12,25 @@
  <view class='pk'>PK</view>
  <view class='sjhd-txt'  >
  <view  class='sjhd-txt-hd' bindtap='datiClick'>
- <text >西塘桥街道</text>
- <text>{{mydata}}分</text>
+ <text class='zhandui'>{{hdmc}}</text>
+ <text>{{hdfs}}分</text>
  </view>
  <view  class='jf-jindutiao' style='width:{{wwSystemWidth-211}}px;'>
- <view  class='sjhd-txt-02'>58%</view>
- <view  class='sjhd-txt-03'>42%</view>
+ <view  class='sjhd-txt-02' style='width:{{hdbl}};'>{{hdbl}}</view>
+ <view  class='sjhd-txt-03' style='width:{{ldbl}};'>{{ldbl}}</view>
  </view>
  <view  class='sjhd-txt-ld' bindtap='datiClick'>
- <text>教育团工委</text>
- <text>420分</text>
+ <text class='zhandui'>{{ldmc}}</text>
+ <text>{{ldfs}}分</text>
  </view>
  </view>
-<view class='sjhd-jfsm'>
+  <view class='btclick'>
+  <image class='btclikimg' bindtap='hdonclick' src='../images/hd-bt.png'style="height:{{btclickimgHH}}px;width:{{wwSystemWidth/2}}px;"></image>
+  <image class='btclikimg' bindtap='ldonclick'src='../images/ld-bt.png'style="height:{{btclickimgHH}}px;width:{{wwSystemWidth/2}}px;"></image>
+  </view>
+<view class='sjhd-shuoming-txt'>
 积分说明：每个用户进入后选择战队进行答题，每人参与活动即得2分，
-答对1题加1分，完成答题后将结算分数，分数实时加入相应
-站队......
+答对1题加1分，完成答题后将结算分数，分数实时加入相应战队......
 </view>
  </view>
   </view>
@@ -37,25 +40,25 @@
    <text class='sjhd-title-txt'>比赛赛程
   </text> </view>
  <view class='gg-box'>
-每个用户进入后选择站队进行答题，每个人参与活动就加1分，答对1题加1分，完成答题后将结算分数实时加入相应站队。。
+<swiper class="swiper"  style="height:{{whSwiper}}px;"  indicator-dots="true" autoplay="true">
+    <block wx:for="{{imgarr}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item}}"    mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper> 
  </view>
 </view>
  <!--商家活动-->
  <view class='sjhd-box'  >
+
  <view class='sjhd-title'>
  <text class='sjhd-title-txt'>比赛说明</text>
  </view>
- <view class='sjhd-img' >
- <image  bindtap='sjonClick' data-conid="ykIcX98u3UlHnSTHNRDlOQ" class='sjhd-images'  src="../images/z01.png" style="height:{{hdImgHH}}px;margin-top:10px;"></image>
- <view class='sjhd-time'>【第一组】 </view>
- </view>
- <view class='sjhd-img' >
- <image  bindtap='sjonClick' data-conid="ykIcX98u3UlHnSTHNRDlOQ" class='sjhd-images'  src="../images/z02.png" style="height:{{hdImgHH}}px;margin-top:10px;"></image>
- <view class='sjhd-time'>【第二组】 </view>
+ <view class='sjhd-shuoming-txt' >比赛说明：依托团县委微信平台“青春海盐”小程序，采取分组PK、两两对决的形式开展，全县直属团（工）委22支代表队按照前期抽签顺序分成3个大组，采用单循环淘汰制，经过3轮PK后每组头名与单场得分最高的队伍组成最终4强，抽签确定比赛对手，展开最终对决，争夺最终冠军。
  </view>
 
-  <!--底部留白-->
-  <view class='root' hidden='true'></view>
+ 
  </view>
  
   <!--分享-->
@@ -79,6 +82,15 @@
  </view> 
    <view class='fx-off'  bindtap='fenxiangOff' >取消</view>
   </view>
+
+
+
+
+
+
+
+
+
   <!--浮标-->
     <view class="fb" style="bottom:100px;" >
     <view class='fb-biao'>
@@ -88,7 +100,7 @@
     </view>
       </view>
  <!--导航-->
-  <view class="dh" style="bottom:0px;" hidden="{{dhbottom}}" >
+  <view class="dh" style="bottom:0px;" hidden="true" >
   <view class='dh01'>
   
     <text class="{{dhtxtClass01}}" bindtap="dhtxt01Cllick">商家首页</text></view>

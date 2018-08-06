@@ -5,13 +5,11 @@ var app = getApp()
 Page({
   data: {
     imgarr: [
-      'https://www.citytk.com/citytk/zjjxhy000001/1.jpg', 
-      'https://www.citytk.com/citytk/zjjxhy000001/2.jpg', 
-      'https://www.citytk.com/citytk/zjjxhy000001/3.jpg',
-      'https://www.citytk.com/citytk/zjjxhy000001/4.jpg'
+      'https://www.citytk.com/citytk/pkjs/images/1.jpg', 
+      'https://www.citytk.com/citytk/pkjs/images/2.jpg', 
+      'https://www.citytk.com/citytk/pkjs/images/3.jpg',
     ],
     whSwiper: "",//轮播高度
-    hdImgHH:"",//活动图片高度
     wwSystemWidth: "",//设备宽度
     whSystemHeight: "",//设备高度
     dhtxtClass01: "dh-txt01-true",//导航01
@@ -23,11 +21,14 @@ Page({
     touchstart:"",
     touchend:"",
     txthideflag:true,
-    wImage01:"",//广告图01宽度
-    hImage01: "",//广告图01高度
     fxonoff:true,//分享页面
-    mydata:"580",
-  
+    btclickimgHH:"",//问答按钮高度
+    hdmc: "数据读取中",//红队名称
+    hdfs: "0",//红队分数
+    hdbl:"50%",//红队占比
+    ldmc: "数据读取中",//蓝队名称
+    ldfs: "0",//蓝队分数
+    ldbl: "50%",//蓝队占比
   },
   onLoad: function () {
     var that = this
@@ -37,26 +38,34 @@ Page({
         that.setData({
           wwSystemWidth: res.windowWidth,
           whSystemHeight: res.windowHeight,
-          whSwiper: res.windowWidth *280/520,
-          hdImgHH: 300 / (650 / res.windowWidth),
-
-          wImage01: res.windowWidth *0.333-5,
-          hImage01: 160/(130/(res.windowWidth * 0.333 - 5)),
-
+          whSwiper: res.windowWidth *625/750,
+          btclickimgHH:(res.windowWidth/2*73)/298,
         })
       }
     })
     console.log("T00:设备宽度" + that.data.wwSystemWidth + "|设备高度" + that.data.whSystemHeight + "|广告图片" + that.data.wImage01)
-    
    
-    this.dhInit();//初始化导航
-    this.loadData(10);//加载内容
-
-
+    this.loadData();//加载内容
+  
   },
   datiClick:function(){
     wx.navigateTo({
       url: '../txtedit/txtedit'
+    })
+  },
+//点击红队
+  hdonclick:function(){
+    var that=this;
+    wx.navigateTo({
+      url: '../txtedit/txtedit?duiwu=' + that.data.hdmc,
+    })
+  },
+
+  //点击蓝队
+  ldonclick: function () {
+    var that = this;
+    wx.navigateTo({
+      url: '../txtedit/txtedit?duiwu=' + that.data.ldmc,
     })
   },
   //拨打电话
@@ -111,59 +120,109 @@ Page({
   console.log("点击广告")
  }
  ,
-  loadData: function (count) {
-   /* var that = this
+  loadData: function () {
+   var that = this
     wx.request({
-      url: 'https://www.citytk.com/djyhphp/mode.php',
+      url: 'https://www.citytk.com/citytk/pkjs/modeht/mode.php',
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       data: {
-        mode: "getdjyhdata",
+        mode: "getzhandui",
       },
       method: "POST",
       success: function (res) {
-        console.log("获取独家优惠数据：" + res.data.length)
-        if (res.data.length<count){
-          count = res.data.length;
-        } 
+        console.log("获取数据：" + res.data.length)
+       
         if (res.data != "") {
-          for (let i = 0; i < count; i++) {
-            let obj = {};
-            obj.viewId = res.data[i].spid;
-            obj.imgutl01 = res.data[i].imgurl01;
-            obj.djyhtitle = res.data[i].sptitle.substring(0, 24);
-            if (res.data[i].dplx = "天猫") {
-              obj.logoimgutl01 = "../images/dptb.jpg";
-            } else {
-              obj.logoimgutl01 = "../images/dptb.jpg";
-            }
-            obj.price = res.data[i].price;
-            var stryy= res.data[i].purchase;
-            if (stryy.length>4){
-              obj.purchase = stryy.substr(0, stryy.length - 4) + "." + stryy.substr(stryy.length-4, 1)+"万";
-            }else{
-              obj.purchase = stryy;
-            }
-           
-            obj.quanPrice = res.data[i].quanPrice;
-            obj.day = res.data[i].outtime;
-           
-            that.data.djyhData.push(obj);
-          }
+          var _hdmc = res.data[0].duiwu;
+          var _ldmc = res.data[1].duiwu;
           that.setData({
-            djyhData: that.data.djyhData,
+            hdmc: _hdmc,
+            ldmc: _ldmc,
           })
+         
+          that.loadDataFenShuforhd(_hdmc, _ldmc);
+        
 
+      
         } else {
-          console.log("获取独家优惠数据为空")
-        }
+          console.log("获取数据为空")
+        } 
       },
       fail: function (e) {
         console.log("获取独家优惠数据失败e:" + e.errMsg)
       }
     })
-    console.log("加载内容完毕")*/
+    console.log("加载战队完毕")
+  },
+  //通过战队获取红队分数
+  loadDataFenShuforhd: function (hdduiwumc, ldduiwumc){
+    var that = this
+    wx.request({
+      url: 'https://www.citytk.com/citytk/pkjs/modeht/mode.php',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        mode: "getfenshuforzhandui",
+        duiwu: hdduiwumc,
+      },
+      method: "POST",
+      success: function (res) {
+       
+
+        if (res.data != "") {
+
+
+          console.log("获取数据为:" + res.data[0].sumfenshu)
+          that.setData({
+            hdfs: res.data[0].sumfenshu,
+          })
+          that.loadDataFenShuforld(ldduiwumc);
+        } else {
+          console.log("获取数据为空")
+        }
+      },
+      fail: function (e) {
+        console.log("获取数据失败e:" + e.errMsg)
+      }
+    })
+    console.log("加载战队完毕")
+  },
+  //通过战队获取蓝队分数
+  loadDataFenShuforld: function (duiwumc) {
+    var that = this
+    wx.request({
+      url: 'https://www.citytk.com/citytk/pkjs/modeht/mode.php',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        mode: "getfenshuforzhandui",
+        duiwu: duiwumc,
+      },
+      method: "POST",
+      success: function (res) {
+
+
+        if (res.data != "") {
+
+
+          console.log("获取数据为:" + res.data[0].sumfenshu)
+          that.setData({
+            ldfs: res.data[0].sumfenshu,
+          })
+          that.dhInit();//初始化分值
+        } else {
+          console.log("获取数据为空")
+        }
+      },
+      fail: function (e) {
+        console.log("获取数据失败e:" + e.errMsg)
+      }
+    })
+    console.log("加载战队完毕")
   },
   //下拉事件
   onPullDownRefresh: function () {
@@ -212,9 +271,42 @@ Page({
       url: '../fenxiang/fenxiang'
     })
   },
-  //导航初始化
+  //比例初始化
   dhInit: function () {
-    console.log("T10：导航初始化完毕！")
+    var that=this;
+
+    var _hdfs = parseInt(that.data.hdfs);
+    var _ldfs = parseInt(that.data.ldfs);
+    if (_hdfs == 0 && _ldfs==0){
+      that.setData({
+        hdbl: "50%",
+        ldbl: "50%",
+      })
+    }else{
+      if (_ldfs == 0) {
+        that.setData({
+          hdbl: "99%",
+          ldbl: "1%",
+        })
+      }else{
+        if (_hdfs == 0) {
+          that.setData({
+            hdbl: "1%",
+            ldbl: "99%",
+          })
+          }else{
+          var fs = parseInt(_hdfs / (_hdfs + _ldfs) * 1000 * 0.1);
+          var _hdbl = fs + "%";
+          var _ldbl = (100 - fs) + "%";
+          that.setData({
+            hdbl: _hdbl,
+            ldbl: _ldbl,
+          })
+          }
+      }
+    }
+    
+    console.log("总分数：" + _ldbl )
   },
   //导航事件
   //导航事件

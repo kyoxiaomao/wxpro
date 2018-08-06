@@ -1,21 +1,83 @@
 /* pages/txtedit.wxss */
+.bg{
+  width: 100%;
+  height: 100%;
+  background-image: url("http://www.citytk.com/citytk/pkjs/images/datibg.jpg");
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+}
 .box{
-  width: 100%;
- 
- 
-}
-.section{
-  width:  100%;
-  border:   1px #ddd solid; 
-}
-.daan{
-    width: 100%;
- display: flex;
- flex-direction:column;
-}
-.checkbox{
-  width: 100%;
- display: flex;
-flex-direction:row;
 
 }
+ 
+ .timu{
+   top: 15%;
+   left: 3.5%;
+   width: 90%;
+   position: fixed; 
+   background-color: #f38b79;
+   border-radius: 10px 10px 10px 10px;
+    padding: 5px 5px 20px 5px; 
+ }
+ .timu text{
+ 
+   font-size: 14px;
+ }
+
+
+ .daanban{
+   width: 100%;
+ position: fixed; 
+display: flex;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+top:40%;
+ }
+ 
+ .imgboxa{
+    margin-top: 8px;
+    background-image: url("http://www.citytk.com/citytk/pkjs/images/Adaan.png");
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+ }
+ .imgboxb{
+    margin-top: 8px;
+    background-image: url("http://www.citytk.com/citytk/pkjs/images/Bdaan.png");
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+ }
+  .imgboxc{
+    margin-top: 8px;
+    background-image: url("http://www.citytk.com/citytk/pkjs/images/Cdaan.png");
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+ }
+  .imgboxd{
+    margin-top: 8px;
+    background-image: url("http://www.citytk.com/citytk/pkjs/images/Ddaan.png");
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+ }
+ .antext{
+   display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  align-items: center;
+    margin-left: 30px;
+   color: #fff;
+ }
+
+ .antxt{
+   width: 95%;
+   line-height: 25px;
+   height: 25px;
+   font-size: 14px;
+   color: #666;
+ 
+   margin-top: 8px;
+   text-align: center;
+ }
+ .xiayiticss{
+   margin-top: 0px !important;
+ }
