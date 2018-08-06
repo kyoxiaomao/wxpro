@@ -5,27 +5,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url:"",//文章链接
+    syWidth: "",//系统宽度
+    syHeight: "",//系统高度
+    timer:0,//用时
+    fsJiShu:0,//得分
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log("计时器:" + options.timer + "|得分: " + options.fsJiShu)
+    var timerC = options.timer;
+    var fsJiShuC = options.fsJiShu;
     var that = this
-    if (options.conId!=""){
-      var _url = "https://mp.weixin.qq.com/s/" + options.conId;
-          console.log("加载链接：" + _url);
+    //获取设备宽高
+    wx.getSystemInfo({
+      success: function (res) {
         that.setData({
-          url:_url
+          syWidth: res.windowWidth,
+          syHeight: res.windowHeight,
+          timer: timerC,
+          fsJiShu: fsJiShuC
+         
         })
-        }else{
-          console.log("没有加载到参数")
-        }
-   
+      }
+    })
 
   },
+  //继续答题
+  fhsyonClick: function () {
+    wx.reLaunch({
+      url: '../index/index'
+    })
 
+  },
+  //返回首页
+fhsyonClick:function(){
+  wx.reLaunch({
+    url: '../city/city'
+  })
+
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

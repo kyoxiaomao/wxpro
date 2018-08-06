@@ -1,9 +1,53 @@
 /* pages/sales/sales.wxss */
-page {  
-  display: block;  
-  min-height: 100%;  
-  background-color: #ddd;  
-}  
-.container{
-  padding-top:0px;
+.bg{
+  width: 100%;
+  height: 100%;
+  background-image: url("http://www.citytk.com/citytk/pkjs/images/datibg.jpg");
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+   
+}
+.box{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.fxbancss{
+      margin-top: 25%;
+       background-image: url("http://www.citytk.com/citytk/pkjs/images/fxban.png");
+        background-size: 100% 100%;
+      -moz-background-size:100% 100%;
+      display: flex;
+flex-direction:column;
+align-items: center;
+color: #fff;
+}
+.titlecss{
+  font-size: 20px;
+  margin-top: 5px;
+}
+.contentcss{
+  margin-top: 20%;
+  color: #000;
+}
+.contentcss01{
+  color: #000;
+}
+.jxdtcss{
+  margin-top: 5%;
+}
+.fxpycss{
+   margin-top: 5px;
+   display: flex;
+flex-direction:row;
+align-items: center;
+}
+.fhsycss{
+   margin-top: 10px;
+}
+.btfxpycss{
+  background-image:url("http://www.citytk.com/citytk/pkjs/images/bt-fxpy.png");
+      background-size: 100% 100%;
+      -moz-background-size:100% 100%;
+      border: none;
 }

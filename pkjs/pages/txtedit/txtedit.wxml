@@ -1,6 +1,7 @@
 <!--pages/txtedit.wxml-->
 <view class='bg'>
 <view class="box"  style='width:{{syWidth}}px;height:{{syHeight}}px;'  >
+<view class='tishu'>第{{jishu}}题</view>
   <view class='timu'><text>{{timu}}</text></view>
 <view class='daanban'>
 

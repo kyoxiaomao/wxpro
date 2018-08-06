@@ -6,8 +6,8 @@
 <image class='bt' bindtap='pkonClick' src='../images/bt-pk.png' style='width:219px;height:45px;'></image>
 </view>
 <view class='fb'>
-<image class='kg' bindtap='kgMusicOnClick' src='../images/{{kgUrlMusic}}.png' style='width:24px;height:15px;'></image>
-<image class='kg' src='../images/{{lbUrlMusic}}.png' style='width:15px;height:15px;'></image>
+<image class='kg' bindtap='kgMusicOnClick' src='../images/{{kgUrlMusic}}.png' style='width:48px;height:30px;'></image>
+<image class='kg' src='../images/{{lbUrlMusic}}.png' style='width:30px;height:30px;'></image>
 </view>
 </view>
 </view>

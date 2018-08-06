@@ -10,6 +10,7 @@ Page({
       'https://www.citytk.com/citytk/pkjs/images/3.jpg',
     ],
     whSwiper: "",//轮播高度
+    hhSwiper: "",//轮播高度
     wwSystemWidth: "",//设备宽度
     whSystemHeight: "",//设备高度
     dhtxtClass01: "dh-txt01-true",//导航01
@@ -38,7 +39,8 @@ Page({
         that.setData({
           wwSystemWidth: res.windowWidth,
           whSystemHeight: res.windowHeight,
-          whSwiper: res.windowWidth *625/750,
+          whSwiper: res.windowWidth *417/750,
+          hhSwiper: res.windowWidth * 625 / 750,
           btclickimgHH:(res.windowWidth/2*73)/298,
         })
       }

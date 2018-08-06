@@ -1,4 +1,5 @@
 // pages/txtedit.js
+var ontimer;
 Page({
 
   /**
@@ -21,7 +22,9 @@ Page({
     tishi:"",
     flag:true,//已答完
     duiwu:"",//当前支持队伍
-    jishu:0,
+    jishu:1,//题目计数
+    fsJiShu:2,//分数计数
+    timer:0,//计时器
  
   },
 
@@ -48,6 +51,17 @@ Page({
     this.insetfenshuforduiwu(options.duiwu,"2");
         this.loaddata();//加载题目
 
+  },
+  //计时器
+ Countdown:function(){
+   var that=this;
+   ontimer = setTimeout(function () {
+      console.log("----Countdown----");
+      that.setData({
+        timer: timer+1,
+      })
+      Countdown();
+    }, 1000);
   },
   //给对应队伍加分
   insetfenshuforduiwu:function(duiwumc,fenshumc){
@@ -117,17 +131,17 @@ Page({
     var that=this;
 
     if (that.data.flag == true){
-      if(that.data.jishu<5){
-        that.setData({
-          jishu: that.data.jishu+1,
-        })
+     
     var daan = event.currentTarget.dataset['daan'];
     if (daan == that.data.anstrue){
         that.setData({
           tishi: "恭喜您回答正确，获得1分！正确答案:" + that.data.anstrue,
           flag:false,
         })
-      this.insetfenshuforduiwu(that.data.duiwu, "1");
+        that.setData({
+          fsJiShu: that.data.fsJiShu+1,
+        })
+      that.insetfenshuforduiwu(that.data.duiwu, "1");
 
     }else{
       that.setData({
@@ -135,65 +149,48 @@ Page({
         flag: false,
       })
       }
-      }else{
-        //大于5题
-        that.setData({
-          jishu: 0,
-        })
-        wx.redirectTo({
-          url: '../index/index'
-        })
-      }
+     
     } 
 
   },
   //下一题目
   xiayitionclick:function(){
-    var that=this;
-    that.setData({
-      tishi:"",
-      flag: true,
-    })
-   that.loaddata();
-  },
-  huanti:function(){
+ 
     var that = this;
-    var pages = getCurrentPages();
-    if(that.data.yy=="完成"){
-      console.log(that.data.yy)
-      var currPage = pages[pages.length - 1];   //当前页面
-      var prevPage = pages[pages.length - 2];  //上一个页面
+    if (that.data.flag == false) {
 
-      //直接调用上一个页面的setData()方法，把数据存到上一个页面中去
-      prevPage.setData({
-        mydata: "582"
+    if (that.data.jishu < 5) {
+      that.setData({
+        jishu: that.data.jishu + 1,
       })
 
-      wx.navigateBack({
-         delta: 1
-       })
-    }else{
- 
-    var _items = that.data.items;
+      that.setData({
+        tishi: "",
+        flag: true,
+      })
+      that.loaddata();
+    } else {
+      //大于5题
+      clearTimeout(ontimer);
+    var timerC=that.data.timer;
+      var fsJiShuC = that.data.fsJiShuC;
+      that.setData({
+        jishu: 1,
+        fsJiShu:2,
+        timer:0,
+      })
+      console.log("当前时间：" + timerC + "当前分数：" + fsJiShuC)
+      wx.reLaunch({
+        url: '../sales/sales?timer=' + timerC + '&fsJiShu=' + fsJiShuC,
+      })
     
-    _items[0].name="a";
-    _items[0].value = "A.中国共产党领导 行动指南 ";
- 
-    _items[1].name = "b";
-    _items[1].value = "B. 共同富裕 根本遵循  ";
- 
-    _items[2].name = "c";
-    _items[2].value = "C．中国共产党领导 根本遵循  ";
- 
-    _items[3].name = "d";
-    _items[3].value = "D．共同富裕 行动指南";
-  
-    that.setData({
-      items: _items,
-      txt: "D．共同富裕 行动指南",
-      yy:"完成",
-      t:true,
-    })
+    }}else{
+      wx.showToast({
+        title: '未进行答题,请作答！',
+        icon: 'none',
+        duration: 2000
+      })
+
     }
   },
   /**

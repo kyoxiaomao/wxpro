@@ -30,7 +30,7 @@
   </view>
 <view class='sjhd-shuoming-txt'>
 积分说明：每个用户进入后选择战队进行答题，每人参与活动即得2分，
-答对1题加1分，完成答题后将结算分数，分数实时加入相应战队......
+答对1题加1分，完成答题后将结算分数，分数实时加入相应战队。
 </view>
  </view>
   </view>
@@ -40,7 +40,7 @@
    <text class='sjhd-title-txt'>比赛赛程
   </text> </view>
  <view class='gg-box'>
-<swiper class="swiper"  style="height:{{whSwiper}}px;"  indicator-dots="true" autoplay="true">
+<swiper class="swiper"  style="height:{{hhSwiper}}px;"  indicator-dots="true" autoplay="true">
     <block wx:for="{{imgarr}}" wx:for-index="index">
       <swiper-item>
         <image src="{{item}}"    mode="aspectFill" />

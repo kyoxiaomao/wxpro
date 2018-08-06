@@ -21,8 +21,8 @@ position: fixed;
   z-index: 998;
    display: flex;
    flex-direction: row;
- justify-content:flex-end;
-right: 15px;
+ justify-content:flex-start;
+left: 10px;
 top: 90%;
  
 }
