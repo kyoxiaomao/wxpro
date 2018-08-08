@@ -2,7 +2,7 @@
 <view class='bg'>
  <view class='cont' style='width:{{syWidth}}px;height:{{syHeight}}px;'>
 <view class='btfb' style='left:{{(syWidth-219)/2}}px;'>
-<image class='bt' bindtap='lxonClick' src='../images/bt-lx.png' style='width:219px;height:45px;'></image>
+<image class='bt' hidden='true' bindtap='lxonClick' src='../images/bt-lx.png' style='width:219px;height:45px;'></image>
 <image class='bt' bindtap='pkonClick' src='../images/bt-pk.png' style='width:219px;height:45px;'></image>
 </view>
 <view class='fb'>

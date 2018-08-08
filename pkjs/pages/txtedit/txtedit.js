@@ -25,6 +25,7 @@ Page({
     jishu:1,//题目计数
     fsJiShu:2,//分数计数
     timer:0,//计时器
+    datifun:"",//答题事件
  
   },
 
@@ -49,18 +50,28 @@ Page({
     })
     console.log("当前支持队伍:" + options.duiwu)
     this.insetfenshuforduiwu(options.duiwu,"2");
-        this.loaddata();//加载题目
+     
+        this.countdown();//开启计时器
 
   },
+  //提示器
+  messhow:function(str){
+    wx.showToast({
+      title: str,
+      icon: 'none',
+      duration: 2000
+    })
+  },
   //计时器
- Countdown:function(){
+ countdown:function(){
    var that=this;
+   
    ontimer = setTimeout(function () {
-      console.log("----Countdown----");
+      console.log("时间："+that.data.timer);
       that.setData({
-        timer: timer+1,
+        timer: that.data.timer+1,
       })
-      Countdown();
+      that.countdown();
     }, 1000);
   },
   //给对应队伍加分
@@ -80,15 +91,17 @@ Page({
       success: function (res) {
         if (res.data==1){
           console.log("插入数据成功！")
+          that.loaddata();//加载题目
         }else{
           console.log("插入数据失败！")
         }
       },
       fail: function (e) {
+        messhow("获取数据失败！");
         console.log("获取独家优惠数据失败e:" + e.errMsg)
       }
     })
-    console.log("加载战队完毕")
+
   },
   //加载题目
   loaddata:function(){
@@ -104,8 +117,7 @@ Page({
       },
       method: "POST",
       success: function (res) {
-        console.log("获取数据：" + res.data[0].timu)
-
+        console.log("获取数据：" + res.data.length)
         if (res.data != "") {
           that.setData({
             timu: res.data[0].timu,
@@ -114,16 +126,20 @@ Page({
             ansc: res.data[0].ansc,
             ansd: res.data[0].ansd,
             anstrue: res.data[0].anstrue,
+            datifun:"btanda",
           })
+          console.log("答题事件：" + that.data.datifun)
         } else {
+          that.messhow("获取数据失败！");
           console.log("获取数据为空")
         }
       },
       fail: function (e) {
+        that.messhow("获取数据失败！");
         console.log("获取独家优惠数据失败e:" + e.errMsg)
       }
     })
-    console.log("加载战队完毕")
+    
   },
   //答题点击
   btanda:function(event){
@@ -162,18 +178,17 @@ Page({
     if (that.data.jishu < 5) {
       that.setData({
         jishu: that.data.jishu + 1,
-      })
-
-      that.setData({
+        datifun: "",//解除按钮限制
         tishi: "",
         flag: true,
       })
+      console.log("答题事件：" + that.data.datifun)
       that.loaddata();
     } else {
       //大于5题
       clearTimeout(ontimer);
     var timerC=that.data.timer;
-      var fsJiShuC = that.data.fsJiShuC;
+      var fsJiShuC = that.data.fsJiShu;
       that.setData({
         jishu: 1,
         fsJiShu:2,
@@ -211,14 +226,14 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    clearTimeout(ontimer);
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    clearTimeout(ontimer);
   },
 
   /**
@@ -239,6 +254,14 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log("点击按钮转发！")
+    }
+    return {
+      title: '海盐青年大学习',
+      path: '/city/city'
+    }
   
   },
   bindFormSubmit: function (e) {

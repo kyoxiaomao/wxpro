@@ -1,8 +1,8 @@
 {
   "pages": [
-
+ 
     "pages/city/city",
-    "pages/sales/sales",
+  "pages/sales/sales",
 "pages/txtedit/txtedit",
       "pages/index/index",
  

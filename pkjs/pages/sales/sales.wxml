@@ -7,12 +7,12 @@
  <view class='fxbancss' style='width:{{syWidth*0.9}}px;height:{{syWidth*0.9*449/676}}px;'>
  <text class='titlecss'>成绩不错!</text>
   <text class='contentcss'>本次答题用时{{timer}}秒</text>
-   <text class='contentcss01'>答对{{fsJiShu-2}}题，答错{{5-fsJiShu-2}}题</text>
-    <text class='contentcss01'>您为支持的战队赢得了{{fsJiShu-2}}分！</text>
+   <text class='contentcss01'>答对{{fsJiShu-2}}题，答错{{5-(fsJiShu-2)}}题</text>
+    <text class='contentcss01'>您为支持的战队赢得了{{fsJiShu}}分！</text>
  </view>
 
 <view class='jxdtcss'>
-<image bindtap='fhsyonClick' src='../images/bt-jxdt.png'  style='width:{{syWidth*0.6}}px;height:{{syWidth*0.6*78/525}}px;'></image>
+<image bindtap='jxdtonClick' src='../images/bt-jxdt.png'  style='width:{{syWidth*0.6}}px;height:{{syWidth*0.6*78/525}}px;'></image>
 </view>
 <view class='fxpycss'>
 <button class='btfxpycss' open-type="share"   style='width:{{syWidth*0.4}}px;height:{{syWidth*0.4*94/257}}px;'></button>
