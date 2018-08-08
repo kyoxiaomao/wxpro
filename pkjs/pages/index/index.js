@@ -30,9 +30,32 @@ Page({
     ldmc: "数据读取中",//蓝队名称
     ldfs: "0",//蓝队分数
     ldbl: "50%",//蓝队占比
+    userInfo:"",//用户数据
+    hdonclickflag:"hdonclick",//红队按钮
+    ldonclickflag: "ldonclick",//蓝队按钮
   },
   onLoad: function () {
     var that = this
+    // 查看是否授权
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function (res) {
+              console.log("用户信息：" + res.userInfo.nickName)
+              if (res.userInfo.nickName!=""){
+               that.checkuser(res.userInfo.nickName);//验证用户
+              }else{
+                console.log("未获取到用户")
+              }
+             
+            }
+          })
+        }
+      }
+    })
+
     //获取设备宽高
     wx.getSystemInfo({
       success: function (res) {
@@ -45,15 +68,85 @@ Page({
         })
       }
     })
-    console.log("T00:设备宽度" + that.data.wwSystemWidth + "|设备高度" + that.data.whSystemHeight + "|广告图片" + that.data.wImage01)
+    console.log("T00:设备宽度" + that.data.wwSystemWidth + "|设备高度" + that.data.whSystemHeight)
    
     this.loadData();//加载内容
   
   },
+
   datiClick:function(){
     wx.navigateTo({
       url: '../txtedit/txtedit'
     })
+  },
+  //验证用户
+  checkuser: function (name) {
+    var that = this
+    wx.request({
+      url: 'https://www.citytk.com/citytk/pkjs/modeht/mode.php',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        mode: "checkusername",
+        nickname: name,
+      },
+      method: "POST",
+      success: function (res) {
+        console.log("获取数据：" + res.data)
+        if (res.data != "") {
+          console.log("用户已存在")
+          that.setData({
+            hdonclickflag: "tishionclick",//红队按钮
+            ldonclickflag: "tishionclick",//蓝队按钮
+          })
+        } else {
+          console.log("新用户")
+         that.adduser(name);//插入新用户
+        }
+      },
+     
+      fail: function (e) {
+        console.log("数据连接失败:" + e.errMsg)
+      }
+    })
+    console.log("用户校验完毕")
+  },
+  //提示信息
+  tishionclick: function () {
+    wx.showToast({
+      title: "今日已答过题，请明日再来！",
+      icon: 'none',
+      duration: 3000
+    })
+  },
+  //插入用户
+  adduser: function (name) {
+    var that = this
+    wx.request({
+      url: 'https://www.citytk.com/citytk/pkjs/modeht/mode.php',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      data: {
+        mode: "addusername",
+        nickname: name,
+      },
+      method: "POST",
+      success: function (res) {
+        console.log("插入用户获取结果：" + res.data)
+
+        if (res.data != "") {
+          console.log("插入用户成功")
+        } else {
+          console.log("插入用户失败")
+        }
+      },
+      fail: function (e) {
+        console.log("数据连接失败:" + e.errMsg)
+      }
+    })
+    console.log("用户插入完毕")
   },
 //点击红队
   hdonclick:function(){
@@ -122,6 +215,7 @@ Page({
   console.log("点击广告")
  }
  ,
+ //加载战队
   loadData: function () {
    var that = this
     wx.request({

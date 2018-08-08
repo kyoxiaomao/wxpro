@@ -14,6 +14,10 @@ flex-direction:column;
 top:43%;
 }
 .bt{
+    background-image:url("http://www.citytk.com/citytk/pkjs/images/bt-pk.png");
+      background-size: 100% 100%;
+      -moz-background-size:100% 100%;
+      border: none;
   margin-top: 15PX;
 }
 .fb{
@@ -22,7 +26,7 @@ position: fixed;
    display: flex;
    flex-direction: row;
  justify-content:flex-start;
-left: 10px;
-top: 90%;
+left: 30px;
+top: 80%;
  
 }

@@ -25,8 +25,8 @@
  </view>
  </view>
   <view class='btclick'>
-  <image class='btclikimg' bindtap='hdonclick' src='../images/hd-bt.png'style="height:{{btclickimgHH}}px;width:{{wwSystemWidth/2}}px;"></image>
-  <image class='btclikimg' bindtap='ldonclick'src='../images/ld-bt.png'style="height:{{btclickimgHH}}px;width:{{wwSystemWidth/2}}px;"></image>
+  <image class='btclikimg' bindtap='{{hdonclickflag}}' src='../images/hd-bt.png'style="height:{{btclickimgHH}}px;width:{{wwSystemWidth/2}}px;"></image>
+  <image class='btclikimg' bindtap='{{ldonclickflag}}'src='../images/ld-bt.png'style="height:{{btclickimgHH}}px;width:{{wwSystemWidth/2}}px;"></image>
   </view>
 <view class='sjhd-shuoming-txt'>
 积分说明：每个用户进入后选择战队进行答题，每人参与活动即得2分，

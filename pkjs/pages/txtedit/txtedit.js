@@ -50,7 +50,7 @@ Page({
     })
     console.log("当前支持队伍:" + options.duiwu)
     this.insetfenshuforduiwu(options.duiwu,"2");
-     
+       this.loaddata();//加载题目
         this.countdown();//开启计时器
 
   },
@@ -89,16 +89,17 @@ Page({
       },
       method: "POST",
       success: function (res) {
+        console.log("给队伍加分返回结果"+res.data.length)
         if (res.data==1){
-          console.log("插入数据成功！")
-          that.loaddata();//加载题目
+          console.log("给队伍加分成功！")
+        
         }else{
-          console.log("插入数据失败！")
+          console.log("给队伍加分失败！")
         }
       },
       fail: function (e) {
-        messhow("获取数据失败！");
-        console.log("获取独家优惠数据失败e:" + e.errMsg)
+        messhow("数据连接失败。。联系管理员");
+        console.log("数据连接失败:" + e.errMsg)
       }
     })
 
@@ -117,7 +118,7 @@ Page({
       },
       method: "POST",
       success: function (res) {
-        console.log("获取数据：" + res.data.length)
+        console.log("获取题目数据：" + res.data.length)
         if (res.data != "") {
           that.setData({
             timu: res.data[0].timu,
@@ -128,15 +129,15 @@ Page({
             anstrue: res.data[0].anstrue,
             datifun:"btanda",
           })
-          console.log("答题事件：" + that.data.datifun)
+          console.log("加载题目成功：" + that.data.datifun)
         } else {
-          that.messhow("获取数据失败！");
-          console.log("获取数据为空")
+          that.messhow("加载题目失败。。。联系管理员");
+          console.log("加载题目失败")
         }
       },
       fail: function (e) {
-        that.messhow("获取数据失败！");
-        console.log("获取独家优惠数据失败e:" + e.errMsg)
+        that.messhow("数据连接失败。。。联系管理员");
+        console.log("数据联系失败e:" + e.errMsg)
       }
     })
     
@@ -182,7 +183,7 @@ Page({
         tishi: "",
         flag: true,
       })
-      console.log("答题事件：" + that.data.datifun)
+      console.log("答题事件解除：" + that.data.datifun)
       that.loaddata();
     } else {
       //大于5题
