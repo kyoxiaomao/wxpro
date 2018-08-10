@@ -5,10 +5,10 @@
 <view class="box"  style='width:{{syWidth}}px;height:{{syHeight}}px;'  >
 
  <view class='fxbancss' style='width:{{syWidth*0.9}}px;height:{{syWidth*0.9*449/676}}px;'>
- <text class='titlecss'>成绩不错!</text>
+ <text class='titlecss'>{{txtstr}}</text>
   <text class='contentcss'>本次答题用时{{timer}}秒</text>
-   <text class='contentcss01'>答对{{fsJiShu-2}}题，答错{{5-(fsJiShu-2)}}题</text>
-    <text class='contentcss01'>您为支持的战队赢得了{{fsJiShu}}分！</text>
+   <text class='contentcss01'>答对{{dadui}}题，答错{{dacuo}}题</text>
+    <text class='contentcss01' hidden='{{lianxisai}}'>您为支持的战队赢得了{{fsJiShu}}分！</text>
  </view>
 
 <view class='jxdtcss'>

@@ -9,16 +9,71 @@ Page({
     syHeight: "",//系统高度
     timer:0,//用时
     fsJiShu:0,//得分
+    txtstr:"表现不错！",//提示字
+    dacuo:"",//答错题数
+    dadui:"",//答对
+    lianxisai:false,//是否哦是练习赛
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+ var that = this
     console.log("计时器:" + options.timer + "|得分: " + options.fsJiShu)
     var timerC = options.timer;
     var fsJiShuC = options.fsJiShu;
-    var that = this
+    that.setData({
+      dadui: fsJiShuC-2,
+    })
+    var modeC = options.modeC;
+    console.log("练习模式开启:" + modeC + "当前答对" + that.data.dadui)
+    var _dadui = that.data.dadui;
+    if (modeC=="true"){
+      that.setData({
+        lianxisai: true,
+      })
+      if (fsJiShuC < 10) {
+        that.setData({
+          txtstr: "继续努力，还有提升空间哦！",
+          dacuo: 20 - _dadui,
+        })
+      } else {
+        if (fsJiShuC < 20) {
+          that.setData({
+            txtstr: "成绩不错哦，加油！",
+            dacuo: 20 - _dadui,
+          })
+        } else {
+          that.setData({
+            txtstr: "满分，你太棒啦！",
+            dacuo: 20 - _dadui,
+          })
+
+        }
+      }
+    }else{
+    if (fsJiShuC<5){
+      that.setData({
+        txtstr: "继续努力，还有提升空间哦！",
+        dacuo: 5 - _dadui,
+      })
+   }else{
+      if (fsJiShuC < 7) {
+        that.setData({
+          txtstr: "成绩不错哦，加油！",
+          dacuo: 5 - _dadui,
+        })
+        }else{
+        that.setData({
+          txtstr: "满分，你太棒啦！",
+          dacuo: 5 - _dadui,
+        })
+
+      }
+    }
+   }
+ 
     //获取设备宽高
     wx.getSystemInfo({
       success: function (res) {

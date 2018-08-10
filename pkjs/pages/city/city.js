@@ -56,10 +56,14 @@ pkonClick:function(){
     url: '../index/index'
   })
 },
-  //跳转到lx页面
-  lxonClick: function () {
+//跳转到练习赛
+lxonClick:function(){
+  var that = this;
+  wx.navigateTo({
+    url: '../txtedit/txtedit?duiwu=lianxi',
+  })
+},
 
-  },
 //背景音乐开关按钮
 kgMusicOnClick:function(){
  

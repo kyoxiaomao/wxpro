@@ -2,8 +2,9 @@
 <view class='bg'>
  <view class='cont' style='width:{{syWidth}}px;height:{{syHeight}}px;'>
 <view class='btfb' style='left:{{(syWidth-219)/2}}px;'>
-<image class='bt' hidden='true' bindtap='lxonClick' src='../images/bt-lx.png' style='width:219px;height:45px;'></image>
+ 
 <button open-type="getUserInfo"  class='bt' bindtap='pkonClick'  style='width:219px;height:45px;'></button> 
+<button open-type="getUserInfo"  hidden='true' class='lxbt' bindtap='lxonClick'  style='width:219px;height:45px;'></button> 
 </view>
 <view class='fb'>
 <image class='kg' bindtap='kgMusicOnClick' src='../images/{{kgUrlMusic}}.png' style='width:48px;height:30px;'></image>

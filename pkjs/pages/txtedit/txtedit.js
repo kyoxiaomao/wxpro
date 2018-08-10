@@ -26,6 +26,7 @@ Page({
     fsJiShu:2,//分数计数
     timer:0,//计时器
     datifun:"",//答题事件
+    modeC:false,//是否是练习模式
  
   },
 
@@ -49,7 +50,17 @@ Page({
       }
     })
     console.log("当前支持队伍:" + options.duiwu)
-    this.insetfenshuforduiwu(options.duiwu,"2");
+    var duiwustr = options.duiwu;
+    if (duiwustr=="lianxi"){
+      that.setData({
+        modeC: true,
+      })
+    
+    }else{
+      that.insetfenshuforduiwu(options.duiwu, "2");
+    
+    }
+    console.log("开启练习模式:" + that.data.modeC)
        this.loaddata();//加载题目
         this.countdown();//开启计时器
 
@@ -158,7 +169,9 @@ Page({
         that.setData({
           fsJiShu: that.data.fsJiShu+1,
         })
+      if (that.data.modeC==false){
       that.insetfenshuforduiwu(that.data.duiwu, "1");
+        }
 
     }else{
       that.setData({
@@ -174,9 +187,13 @@ Page({
   xiayitionclick:function(){
  
     var that = this;
+    var i=5;
+    if (that.data.modeC==true){
+          i=20;
+    }
     if (that.data.flag == false) {
 
-    if (that.data.jishu < 5) {
+    if (that.data.jishu < i) {
       that.setData({
         jishu: that.data.jishu + 1,
         datifun: "",//解除按钮限制
@@ -190,6 +207,7 @@ Page({
       clearTimeout(ontimer);
     var timerC=that.data.timer;
       var fsJiShuC = that.data.fsJiShu;
+      var modeC = that.data.modeC;
       that.setData({
         jishu: 1,
         fsJiShu:2,
@@ -197,7 +215,7 @@ Page({
       })
       console.log("当前时间：" + timerC + "当前分数：" + fsJiShuC)
       wx.reLaunch({
-        url: '../sales/sales?timer=' + timerC + '&fsJiShu=' + fsJiShuC,
+        url: '../sales/sales?timer=' + timerC + '&fsJiShu=' + fsJiShuC + '&modeC=' + modeC ,
       })
     
     }}else{

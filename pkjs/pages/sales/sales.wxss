@@ -23,8 +23,8 @@ align-items: center;
 color: #fff;
 }
 .titlecss{
-  font-size: 20px;
-  margin-top: 5px;
+  font-size: 16px;
+  margin-top: 8px;
 }
 .contentcss{
   margin-top: 20%;

@@ -20,6 +20,15 @@ top:43%;
       border: none;
   margin-top: 15PX;
 }
+
+.lxbt{
+    background-image:url("http://www.citytk.com/citytk/pkjs/images/bt-lx.png");
+      background-size: 100% 100%;
+      -moz-background-size:100% 100%;
+      border: none;
+  margin-top: 15PX;
+}
+
 .fb{
 position: fixed; 
   z-index: 998;
