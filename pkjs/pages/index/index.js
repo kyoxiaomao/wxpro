@@ -45,7 +45,7 @@ Page({
             success: function (res) {
               console.log("用户信息：" + res.userInfo.nickName)
               if (res.userInfo.nickName!=""){
-               that.checkuser(res.userInfo.nickName);//验证用户
+              that.checkuser(res.userInfo.nickName);//验证用户
               }else{
                 console.log("未获取到用户")
               }
