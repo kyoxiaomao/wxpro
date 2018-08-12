@@ -1,19 +1,21 @@
 <!--pages/txtedit.wxml-->
-<view class='bg'>
+<view class='{{bgcss}}'>
 <view class="box"  style='width:{{syWidth}}px;height:{{syHeight}}px;'  >
 <view class='tishu'>第{{jishu}}题</view>
   <view class='timu'><text>{{timu}}</text></view>
 <view class='daanban'>
 
-<view class='imgboxa' bindtap='{{datifun}}' data-daan="A" style='width:{{anbtWW}}px;height:{{anbtHH}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansa}}</text></view>
-<view class='imgboxb' bindtap='{{datifun}}' data-daan="B" style='width:{{anbtWW}}px;height:{{anbtHH}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansb}}</text></view>
-<view class='imgboxc' bindtap='{{datifun}}' data-daan="C" style='width:{{anbtWW}}px;height:{{anbtHH}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansc}}</text></view>
-<view class='imgboxd' bindtap='{{datifun}}' data-daan="D" style='width:{{anbtWW}}px;height:{{anbtHH}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansd}}</text></view>
+<view class='imgboxa' bindtap='{{datifun}}' data-daan="A" style='width:{{anbtWW}}px;height:{{anbtHH+5}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansa}}</text></view>
+<view class='imgboxb' bindtap='{{datifun}}' data-daan="B" style='width:{{anbtWW}}px;height:{{anbtHH+5}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansb}}</text></view>
+<view class='imgboxc' bindtap='{{datifun}}' data-daan="C" style='width:{{anbtWW}}px;height:{{anbtHH+5}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansc}}</text></view>
+<view class='imgboxd' bindtap='{{datifun}}' data-daan="D" style='width:{{anbtWW}}px;height:{{anbtHH+5}}px;' ><text class='antext' style='height:{{anbtHH}}px;'>{{ansd}}</text></view>
  
 <text class='antxt'>{{tishi}}</text>
 <image class='xiayiticss' bindtap='xiayitionclick' src='../images/xiayiti.png' style='width:{{tibtWW}}px;height:{{tibtHH}}px;'></image>
 </view>
-</view>
+ </view>
 <button hidden='{{t}}' bindtap='huanti'>{{yy}}</button>
 <view hidden='{{t}}'>{{context}}</view>
+ <view class='jszc'>@技术支持 嘉兴地精科技有限公司</view>
+
 </view>

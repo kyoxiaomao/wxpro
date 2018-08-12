@@ -143,10 +143,9 @@ fhsyonClick:function(){
   onReachBottom: function () {
   
   },
-
   /**
-   * 用户点击右上角分享
-   */
+    * 用户点击右上角分享
+    */
   onShareAppMessage: function () {
     console.log("来自按钮的分享！")
     return {
@@ -154,4 +153,5 @@ fhsyonClick:function(){
       path: 'pages/city/city'
     }
   }
+ 
 })

@@ -6,8 +6,15 @@
   background-size: 100% 100%;
   -moz-background-size:100% 100%;
 }
+.lxbg{
+   width: 100%;
+  height: 100%;
+  background-image: url("http://www.citytk.com/citytk/pkjs/images/lianxibg.jpg");
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+}
 .box{
-
+ align-items: center;
 }
  .tishu{
       position: fixed; 
@@ -44,24 +51,28 @@ top:40%;
  
  .imgboxa{
     margin-top: 8px;
+     padding-top: 3px;
     background-image: url("http://www.citytk.com/citytk/pkjs/images/Adaan.png");
   background-size: 100% 100%;
   -moz-background-size:100% 100%;
  }
  .imgboxb{
     margin-top: 8px;
+     padding-top: 3px;
     background-image: url("http://www.citytk.com/citytk/pkjs/images/Bdaan.png");
   background-size: 100% 100%;
   -moz-background-size:100% 100%;
  }
   .imgboxc{
     margin-top: 8px;
+    padding-top: 3px;
     background-image: url("http://www.citytk.com/citytk/pkjs/images/Cdaan.png");
   background-size: 100% 100%;
   -moz-background-size:100% 100%;
  }
   .imgboxd{
     margin-top: 8px;
+     padding-top: 3px;
     background-image: url("http://www.citytk.com/citytk/pkjs/images/Ddaan.png");
   background-size: 100% 100%;
   -moz-background-size:100% 100%;
@@ -88,3 +99,10 @@ top:40%;
  .xiayiticss{
    margin-top: 0px !important;
  }
+ .jszc{
+  position: fixed;
+    bottom: 5px;
+ right: 0px;
+  font-size: 12px;
+  opacity: 0.3;
+}

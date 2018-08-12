@@ -123,11 +123,14 @@ kgMusicOnClick:function(){
   onReachBottom: function () {
   
   },
-
   /**
-   * 用户点击右上角分享
-   */
+    * 用户点击右上角分享
+    */
   onShareAppMessage: function () {
-  
+    console.log("来自按钮的分享！")
+    return {
+      title: '海盐青年大学习',
+      path: 'pages/city/city'
+    }
   }
 })

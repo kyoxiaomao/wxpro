@@ -21,7 +21,7 @@
 <view class='fhsycss'>
 <image bindtap='fhsyonClick' src='../images/bt-fhsy.png'  style='width:{{syWidth*0.5}}px;height:{{syWidth*0.5*66/343}}px;'></image>
 </view>
-
+<view class='jszc'>@技术支持 嘉兴地精科技有限公司</view>
 </view>
 
 </view>

@@ -31,8 +31,8 @@ Page({
     ldfs: "0",//蓝队分数
     ldbl: "50%",//蓝队占比
     userInfo:"",//用户数据
-    hdonclickflag:"hdonclick",//红队按钮
-    ldonclickflag: "ldonclick",//蓝队按钮
+    hdonclickflag:"tishionclick",//红队按钮提示
+    ldonclickflag: "tishionclick",//蓝队按钮提示
   },
   onLoad: function () {
     var that = this
@@ -101,6 +101,7 @@ Page({
             ldonclickflag: "tishionclick",//蓝队按钮
           })
         } else {
+        
           console.log("新用户")
          that.adduser(name);//插入新用户
         }
@@ -137,6 +138,10 @@ Page({
         console.log("插入用户获取结果：" + res.data)
 
         if (res.data != "") {
+          that.setData({
+            hdonclickflag: "hdonclick",//红队按钮
+            ldonclickflag: "ldonclick",//蓝队按钮
+          })
           console.log("插入用户成功")
         } else {
           console.log("插入用户失败")
@@ -358,9 +363,7 @@ Page({
     })
 
   },
-  onShareAppMessage: function () {
-
-  },
+ 
   fxpageOnclick:function(){
     //
     wx.navigateTo({

@@ -27,6 +27,7 @@ Page({
     timer:0,//计时器
     datifun:"",//答题事件
     modeC:false,//是否是练习模式
+    bgcss:"bg",//背景
  
   },
 
@@ -54,6 +55,7 @@ Page({
     if (duiwustr=="lianxi"){
       that.setData({
         modeC: true,
+        bgcss: "lxbg"
       })
     
     }else{
@@ -272,17 +274,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-      console.log("点击按钮转发！")
-    }
-    return {
-      title: '海盐青年大学习',
-      path: '/city/city'
-    }
-  
-  },
+ 
   bindFormSubmit: function (e) {
     wx.redirectTo({
       url: '../index/index'

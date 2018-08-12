@@ -4,7 +4,7 @@
 <view class='btfb' style='left:{{(syWidth-219)/2}}px;'>
  
 <button open-type="getUserInfo"  class='bt' bindtap='pkonClick'  style='width:219px;height:45px;'></button> 
-<button open-type="getUserInfo"  hidden='true' class='lxbt' bindtap='lxonClick'  style='width:219px;height:45px;'></button> 
+<button open-type="getUserInfo"    class='lxbt' bindtap='lxonClick'  style='width:219px;height:45px;'></button> 
 </view>
 <view class='fb'>
 <image class='kg' bindtap='kgMusicOnClick' src='../images/{{kgUrlMusic}}.png' style='width:48px;height:30px;'></image>
